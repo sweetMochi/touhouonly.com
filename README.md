@@ -134,6 +134,7 @@ This project code is for study guideline purposes only.
 
 [![twitter](https://img.shields.io/badge/twitter-tw-blue?logo=twitter&style=for-the-badge)](https%3A%2F%2Ftwitter.com%2Ftouhouonly_tw)
 [![facebook](https://img.shields.io/badge/facebook-tw-blue?logo=facebook&style=for-the-badge)](https%3A%2F%2Ffacebook.com%2FTouhouOnly)
+
 <service@touhouonly.com>
 
 <!-- ACKNOWLEDGEMENTS -->
