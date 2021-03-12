@@ -1,0 +1,32 @@
+<h1 class="headline" translate="$.transportation"></h1>
+<ng-container *ngIf=" year !== 2018 ">
+	<h2 class="title" translate="$.byTheTaipeiMetro"></h2>
+	<p>搭乘捷運淡水線至劍潭站下車，由二號出口出站步行約 10 分鐘。</p>
+	<h2 class="title" translate="$.byBus"></h2>
+	<table>
+		<tr>
+			<th>劍潭站</th>
+			<th>劍潭國小</th>
+		</tr>
+		<tr>
+			<td>203、218、220、260、267、277、280、285、279、308、310、606、612、646、665、685、902、紅3</td>
+			<td>26、41、250、266、280、288、290、303、529、616、618</td>
+		</tr>
+	</table>
+	<h2 class="title" translate="$.byCar"></h2>
+	<ul>
+		<li>重慶北路交流道下往市區方向→民族西路口左轉→承德路口左轉→劍潭路右轉→中山北路右轉→沿中山北路直行過通河街口抵中心</li>
+		<li>環河北路交流道下敦煌路左轉→承德路口左轉→劍潭路右轉→中山北路右轉→沿中山北路直行過通河街口抵中心</li>
+		<li>重慶北路交流道下往士林、北投方向→過百齡橋直行中正路→中山北路右轉→沿中山北路直行過通河街口抵中心</li>
+	</ul>
+	<p>轉載自劍潭青年動中心官方網站</p>
+	<google-map
+		width="100%"
+		[center]="place"
+	></google-map>
+</ng-container>
+
+<ng-container *ngIf=" year === 2018 ">
+	<app-location-ntnu></app-location-ntnu>
+</ng-container>
+

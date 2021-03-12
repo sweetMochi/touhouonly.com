@@ -1,0 +1,91 @@
+@import "src/less/base/color.less";
+@import "src/less/base/LessXD.less";
+
+
+.logo {
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	margin-left: -500px;
+	width: 140px;
+	user-select: none;
+	font-size: 18px;
+
+	&:hover {
+		.logo-event {
+			transform: rotateY(180deg);
+		}
+	}
+
+	&-event {
+		display: block;
+		width: 85%;
+		margin: 0 auto;
+		padding-bottom: 85%;
+		transition: transform 0.8s;
+		transform-style: preserve-3d;
+		background-size: 100% auto;
+		background-image: url("@{images}/2020/base/event.png");
+	}
+
+	&-icon {
+		display: block;
+		width: 30px;
+		height: 30px;
+		background-size: 100% auto;
+		background-image: url("@{images}/logo.png");
+	}
+
+	p {
+		display: flex;
+		justify-content: space-between;
+		color: #fff;
+		opacity: .5;
+		margin-top: -20px;
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+		border-bottom: solid 1px rgba(255, 255, 255, .5);
+	}
+
+	h1 {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		color: #fff;
+		opacity: .75;
+		font-size: 18px;
+
+		b {
+			font-size: 23px;
+			font-weight: normal;
+		}
+	}
+
+
+	@media @view-xl {
+		position: fixed;
+		z-index: 12;
+		top: 0;
+		left: 0;
+		margin-top: 5%;
+		margin-left: 5%;
+		width: auto;
+		height: auto;
+		background-color: transparent;
+
+		&-event {
+			width: 13.5vmin;
+			height: 13.5vmin;
+			padding: 0;
+			filter: drop-shadow(0 0 3px rgba(0,0,0, .7));
+		}
+
+		p {
+			display: none;
+		}
+
+		h1 {
+			display: none;
+		}
+	}
+}

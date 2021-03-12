@@ -1,0 +1,71 @@
+<section class="content">
+	<article *ngIf="event">
+		<h2>
+			<i class="dot"></i>
+			<span translate="$.announcements"></span>
+		</h2>
+		<ul class="notice">
+			<li>
+				<b translate="$.date"></b>
+				<span [textContent]="event.date"></span>
+			</li>
+			<li>
+				<b translate="$.location"></b>
+				<span
+					*ngIf="event.addressNTNU"
+					translate="site.addressNTNU"
+				></span>
+				<span
+					*ngIf="!event.addressNTNU"
+					translate="site.address"
+				></span>
+			</li>
+			<li>
+				<b translate="$.offer"></b>
+				<span
+					translate="$.boothX"
+					[translateParams]=" { x: event.offer } "
+				></span>
+			</li>
+			<li>
+				<b translate="$.committee"></b>
+				<span translate="site.committee"></span>
+			</li>
+			<li>
+				<b translate="form.signupClosed"></b>
+				<span
+					*ngIf="signupClosed"
+					translate="hint.signupIsClosed"
+				></span>
+				<span
+					*ngIf="!signupClosed"
+					[textContent]="event.signupClosedDate"
+				></span>
+			</li>
+		</ul>
+		<a
+			*ngIf="!signupClosed"
+			class="content-more" [href]="event.signupLink">
+			<i class="fa fa-caret-down"></i>
+			<span translate="form.signup"></span>
+		</a>
+	</article>
+	<article>
+		<h2>
+			<i class="dot"></i>
+			<span translate="$.regulations"></span>
+		</h2>
+		<p translate="hint.regulations"></p>
+		<a class="content-more" [routerLink]="regulationsLink">
+			<i class="fa fa-caret-down"></i>
+			<span>more</span>
+		</a>
+	</article>
+	<aside class="link">
+		<ul>
+			<li *ngFor="let item of links">
+				<app-index-link [item]="item"></app-index-link>
+			</li>
+		</ul>
+	</aside>
+</section>

@@ -1,0 +1,52 @@
+@import "src/less/base/color.less";
+@import "src/less/base/LessXD.less";
+
+
+.stage {
+	position: relative;
+	height: 1200px;
+
+	@media @view-xl {
+		width: auto;
+		overflow: hidden;
+		padding-bottom: 100%;
+		height: 0;
+
+		&-wrap {
+			width: 120%;
+			margin-left: -10%;
+		}
+	}
+
+	@image-set:
+	marisa 80 135 11 28,
+	reimu 17 27.5 5 83,
+	piece 25 17.5 0 40,
+	cirno 25 25 30 10,
+	yuyuko 16 20 64 3,
+	box 60 22.5 120 40;
+
+	&-wrap > div {
+		position: absolute;
+		background-size: 100% auto;
+	}
+
+	.for(@image-set, {
+
+		@pair: extract(@list, @i);
+		@name: extract(@pair, 1);
+		@width: extract(@pair, 2);
+		@padding-bottom: extract(@pair, 3);
+		@margin-top: extract(@pair, 4);
+		@left: extract(@pair, 5);
+
+		.stage-@{name} {
+			width: @width * 1%;
+			padding-bottom: @padding-bottom * 1%;
+			margin-top: @margin-top * 1%;
+			left: @left * 1%;
+			background-image: url("@{images}/2020/stage/@{name}.png");
+		}
+	});
+
+}

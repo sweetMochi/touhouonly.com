@@ -1,0 +1,38 @@
+<div
+	class="nav nav-{{ year }}"
+	[class.nav--show]="show"
+	><button
+		class="nav-btn nav-open"
+		(click)="userShow(true)"
+		><i class="fa fa-bars"></i>
+	</button>
+	<nav>
+		<div class="nav-wrap" data-nav="wrap">
+			<ul class="nav-list">
+				<li>
+					<span
+						translate="nav.home"
+						[routerLink]="home"
+					></span>
+				</li>
+				<ng-container *ngFor="let item of list">
+					<li>
+						<span
+							translate="nav.{{ item.path }}"
+							[routerLink]="item.path"
+						></span>
+					</li>
+				</ng-container>
+			</ul>
+		</div>
+	</nav>
+	<button
+		class="nav-btn nav-close"
+		(click)="userShow(false)"
+		><i class="fa fa-times"></i>
+	</button>
+	<div
+		class="nav-bg"
+		(click)="userShow(false)"
+	></div>
+</div>

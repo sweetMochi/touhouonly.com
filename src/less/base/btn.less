@@ -1,0 +1,42 @@
+
+.btn {
+	color: @bg-light;
+	display: inline-block;
+	text-align: center;
+	padding: @sp ( @sp * 1.5 );
+	background-color: @mc-dark;
+
+	&&-inactive {
+		color: #666;
+		background-color: #ccc;
+		cursor: default;
+
+		&:hover {
+			filter: brightness(110%);
+		}
+	}
+
+	&&-block {
+		display: block;
+		width: 50%;
+		margin: 0 auto;
+	}
+
+	&:hover {
+		filter: brightness(120%);
+	}
+}
+
+
+.year-2020 {
+	.btn {
+		background-color: @mc-dark-2020;
+	}
+}
+
+
+.year-2018 {
+	.btn {
+		background-color: @mc-dark-2018;
+	}
+}

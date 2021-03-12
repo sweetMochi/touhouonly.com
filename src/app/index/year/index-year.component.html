@@ -1,0 +1,32 @@
+<div class="year">
+	<ul>
+		<ng-container *ngFor="let item of list; let i = index">
+			<li>
+				<ng-container *ngIf="item.homeSite">
+					<a [href]="item.homeSite">
+						<img
+							[src]="image(item)"
+							alt="{{ 'site.nthX' | translate: { x: list.length - i } }}"
+						/>
+						<span
+							translate="site.nthX"
+							[translateParams]=" { x: list.length - i } "
+						></span>
+					</a>
+				</ng-container>
+				<ng-container *ngIf="!item.homeSite">
+					<a [routerLink]=" item.thisYear ? '/' : '/' + item.year">
+						<img
+							[src]="image(item)"
+							alt="{{ 'site.nthX' | translate: { x: list.length - i } }}"
+						/>
+						<span
+							translate="site.nthX"
+							[translateParams]=" { x: list.length - i } "
+						></span>
+					</a>
+				</ng-container>
+			</li>
+		</ng-container>
+	</ul>
+</div>

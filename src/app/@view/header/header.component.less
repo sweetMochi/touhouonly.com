@@ -1,0 +1,51 @@
+@import "src/less/base/color.less";
+
+.header {
+	height: 390px;
+	margin: 0 auto;
+
+
+	@media @view-xl {
+		width: auto;
+		overflow: hidden;
+		height: 0;
+		padding-bottom: 40%;
+		margin-bottom: -10%;
+	}
+
+	.header-bg {
+		width: 60%;
+		margin-left: 20%;
+		padding-bottom: 41%;
+		background-size: 100% auto;
+		background-image: url("@{images}/2021/stage/chara.png");
+	}
+
+	&-2020 {
+		.header-bg {
+			width: 125%;
+			margin-left: -15%;
+			padding-bottom: 40%;
+			background-size: 100% auto;
+			background-image: url("@{images}/2020/base/header.png");
+		}
+	}
+
+
+	&-2018 {
+		.header-bg {
+			width: 150%;
+			margin-left: -25%;
+			padding-bottom: 48%;
+			background-size: 100% auto;
+			background-image: url("@{images}/2018/base/header.png");
+
+			@media @view-xl {
+				width: 120%;
+				padding-bottom: 38%;
+				margin-left: -10%;
+			}
+		}
+	}
+
+}

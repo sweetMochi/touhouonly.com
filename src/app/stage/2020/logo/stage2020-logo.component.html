@@ -1,0 +1,15 @@
+<div class="logo" *ngIf="event">
+	<i class="logo-event"></i>
+	<p>
+		<span translate="site.short"></span>
+		<span
+			*ngIf="event.subtitle"
+			translate="event.{{ year }}.subtitle"
+		></span>
+	</p>
+	<h1>
+		<i class="logo-icon"></i>
+		<span translate="site.title"></span>
+		<b [textContent]="event.nth"></b>
+	</h1>
+</div>

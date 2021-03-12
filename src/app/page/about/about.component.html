@@ -1,0 +1,33 @@
+<h1 class="headline" translate="$.announcements"></h1>
+<img src="{{ image }}/about.png" alt="{{ 'site.title' | translate }}">
+<p class="text-center" translate="site.about"></p>
+<h2 class="title">
+	<span translate="$.schedule"></span>
+</h2>
+<table>
+	<tr>
+		<th translate="$.gensokyoEvent"></th>
+		<th translate="$.time"></th>
+	</tr>
+	<ng-container *ngIf="schedule">
+		<ng-container *ngFor="let item of schedule.list; let i = index">
+			<tr>
+				<td translate="schedule.{{ year }}.{{ i }}"></td>
+				<td [textContent]="item"></td>
+			</tr>
+		</ng-container>
+	</ng-container>
+</table>
+<h2 class="title">
+	<span translate="$.artSource"></span>
+</h2>
+<ol>
+	<ng-container *ngFor="let li of link">
+		<li>
+			<a [href]="li.url" traget="_blank">
+				<span [textContent]="li.title"></span>
+				<i class="fa fa-external-link"></i>
+			</a>
+		</li>
+	</ng-container>
+</ol>

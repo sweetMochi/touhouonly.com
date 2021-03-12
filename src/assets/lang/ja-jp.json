@@ -1,0 +1,93 @@
+{
+  "$": {
+    "announcements": "開催事項",
+    "announcementsForCosplay": "COSPLAY 參加注意事項",
+    "announcementsForVisitor": "一般參加者注意事項",
+    "artSource": "素材感謝",
+    "boothX": "{{x}} 攤",
+    "byBus": "搭乘公車",
+    "byCar": "開車前往",
+    "byTheTaipeiMetro": "搭乘捷運",
+    "committee": "籌備委員會",
+    "date": "日期",
+    "dressingRoom&Floor": "更衣室及場地維護相關規定事項",
+    "gensokyoEvent": "幻想鄉活動",
+    "hallRegulations": "場內規定事項",
+    "host": "主辦單位",
+    "location": "地點",
+    "offer": "攤位募集",
+    "regulations": "場內規範",
+    "schedule": "活動流程",
+    "signupLink": "報名網址",
+    "ticketNotice": "購票、入場、排隊相關之規定及注意事項",
+    "time": "時間",
+    "transportation": "交通方式"
+  },
+  "event": {
+    "2017": {
+      "subtitle": "初夏季"
+    },
+    "2018": {
+      "subtitle": "豐秋慶"
+    },
+    "2020": {
+      "subtitle": "冰雪冬"
+    }
+  },
+  "form": {
+    "signup": "立即報名",
+    "signupClosed": "報名截止"
+  },
+  "hint": {
+    "regulations": "場內請勿喧嘩、奔跑及大聲喊叫，也請勿在出入口及走道逗留、休憩、聚會。若有需要請至休息區，請勿於走道邊席地而坐以免造成其他參加者出入移動之困擾。",
+    "signupIsClosed": "報名已截止"
+  },
+  "link": {
+    "facebook": "春櫻宴粉絲團",
+    "plurk": "春櫻宴的噗浪",
+    "twitter": "春櫻宴的推特"
+  },
+  "nav": {
+    "about": "關於活動",
+    "club": "社團參加",
+    "cosplay": "Cosplay",
+    "home": "ホーム",
+    "location": "交通位置",
+    "visitor": "一般參加"
+  },
+  "schedule": {
+    "2018": {
+      "0": "少女準備中之社團入場",
+      "1": "幻想的境界 COSER 入場",
+      "2": "人里東方眾的一般入場",
+      "3": "念寫製作的 COSER 大合照",
+      "4": "騷靈三姊妹的東方音樂",
+      "5": "香霖堂的官方猜拳大賽"
+    },
+    "2020": {
+      "0": "少女準備中之社團入場",
+      "1": "幻想的境界 COSER 入場",
+      "2": "人里東方眾的一般入場",
+      "3": "騷靈三姊妹的東方音樂",
+      "4": "念寫 COSER 大合照",
+      "5": "琪露諾最強⭐抽獎大賽"
+    },
+    "2021": {
+      "0": "少女準備中之社團入場",
+      "1": "幻想的境界 COSER 入場",
+      "2": "人里東方眾的一般入場",
+      "3": "騷靈三姊妹的東方音樂",
+      "4": "念寫製作的 COSER 大合照",
+      "5": "針妙丸的萬寶抽獎"
+    }
+  },
+  "site": {
+    "about": "這是一群，對東方樂此不疲的人們，為各位東方眾舉辦的一場盛宴 :)",
+    "address": "劍潭青年活動中心 2 樓 群英堂",
+    "addressNTNU": "師範大學公館校區 中正堂",
+    "committee": "春櫻宴籌備委員會",
+    "nthX": "第 {{x}} 屆東方春櫻宴",
+    "short": "春櫻宴",
+    "title": "東方春櫻宴"
+  }
+}

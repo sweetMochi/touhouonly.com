@@ -1,0 +1,34 @@
+@import "src/less/base/color.less";
+@import "src/less/base/LessXD.less";
+
+
+.stage {
+	position: relative;
+	height: 800px;
+
+	@media @view-xl {
+		width: auto;
+		overflow: hidden;
+		padding-bottom: 80%;
+		height: 0;
+
+		&-wrap {
+			width: 120%;
+			margin-left: -10%;
+		}
+	}
+
+	&-wrap > div {
+		position: absolute;
+		background-size: 100% auto;
+	}
+
+	&-chara {
+		width: 120%;
+		padding-bottom: 80%;
+		margin-top: 5%;
+		left: -2%;
+		background-image: url("@{images}/2021/stage/chara.png");
+	}
+
+}

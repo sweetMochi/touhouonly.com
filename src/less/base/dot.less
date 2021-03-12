@@ -1,0 +1,27 @@
+.dot {
+	width: 55px;
+	height: 55px;
+	display: inline-block;
+	margin-right: @sp * 1.2;
+	vertical-align: middle;
+	background-size: 100% auto;
+	background-image: url("@{images}/2021/base/dot.png");
+
+	@media @view-xl {
+		width: 8vmin;
+		height: 8vmin;
+	}
+}
+
+
+.year-2020 {
+	.dot {
+		background-image: url("@{images}/2020/base/dot.png");
+	}
+}
+
+.year-2018 {
+	.dot {
+		background-image: url("@{images}/2018/base/dot.png");
+	}
+}

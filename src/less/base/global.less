@@ -1,0 +1,43 @@
+
+body {
+	font-size: @font-size;
+	overflow-x: hidden;
+	color: #666;
+	font-family: "微軟正黑體";
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-color: @bg-dark;
+	background-image: url("@{images}/2021/base/bg.jpg");
+
+	&.year-2020 {
+		background-color: @bg-dark-2020;
+		background-image: url("@{images}/2020/base/bg.jpg");
+	}
+
+	&.year-2018 {
+		background-color: @bg-dark-2018;
+		background-image: url("@{images}/2018/base/bg.jpg");
+	}
+
+}
+
+a {
+	color: #0072ff;
+}
+
+.wrap {
+	position: relative;
+	width: 1200px;
+	margin: 0 auto;
+
+	@media @view-xl {
+		width: 100%;
+	}
+
+}
+
+
+.text-center {
+	text-align: center;
+}

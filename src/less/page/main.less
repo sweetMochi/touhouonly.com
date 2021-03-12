@@ -1,0 +1,119 @@
+.page {
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	padding: 50px;
+	min-height: 500px;
+	line-height: 200%;
+	font-size: 1.2rem;
+	background-image: url("@{images}/panel.png");
+
+	@media @view-xl {
+		font-size: .9rem;
+		padding: 7%;
+		background-size: 7vmin auto;
+		margin-bottom: 5%;
+	}
+
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	small {
+		font-size: 1rem;
+	}
+
+	iframe {
+		width: 100%;
+		height: 500px;
+		margin-top: 20px;
+	}
+
+	ul,
+	ol {
+		margin-bottom: 30px;
+	}
+
+	ul {
+		li {
+			list-style-type: disc;
+			margin-left: 40px;
+
+			@media @view-xl {
+				margin-left: 7%;
+			}
+		}
+	}
+
+	table {
+		margin: 0 auto;
+		th, td {
+			padding: 5px 10px;
+			border: solid 1px @mc-dark;
+		}
+		th {
+			white-space: nowrap;
+			color: @bg-light;
+			background-color: @mc-dark;
+		}
+		td {
+			background-color: #fefefe;
+		}
+
+		&.table-x3 {
+			width: 30%;
+			display: inline-table;
+			margin: 0 1%;
+			margin-bottom: 30px;
+
+			@media @view-xl {
+				width: 100%;
+			}
+		}
+	}
+
+	&::after {
+		@border: -15px;
+		content: "";
+		position: absolute;
+		z-index: -1;
+		top: @border;
+		right: @border;
+		bottom: @border;
+		left: @border;
+		background-color: @glass-dark;
+
+		@media @view-xl {
+			left: 0;
+			right: 0;
+			top: -5px;
+			bottom: -5px;
+		}
+	}
+}
+
+
+.year-2020 {
+	table {
+		th, td {
+			border: solid 1px @mc-dark-2020;
+		}
+		th {
+			background-color: @mc-dark-2020;
+		}
+	}
+}
+
+
+.year-2018 {
+	table {
+		th, td {
+			border: solid 1px @mc-dark-2018;
+		}
+		th {
+			background-color: @mc-dark-2018;
+		}
+	}
+}

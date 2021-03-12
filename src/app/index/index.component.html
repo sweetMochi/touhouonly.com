@@ -1,0 +1,30 @@
+
+<!-- 首頁 開始 -->
+<section [hidden]="isPage">
+	<a id="anchor-index"></a>
+	<app-stage2021 *ngIf=" year === 2021 "></app-stage2021>
+	<app-stage2020 *ngIf=" year === 2020 "></app-stage2020>
+	<app-stage2018 *ngIf=" year === 2018 "></app-stage2018>
+	<app-nav [year]="year"></app-nav>
+	<app-index-main></app-index-main>
+	<app-index-year></app-index-year>
+</section>
+<!-- 首頁 結束 -->
+
+<!-- 內頁 開始 -->
+<section [hidden]="!isPage">
+	<app-header></app-header>
+	<a id="anchor-page"></a>
+	<app-nav [year]="year"></app-nav>
+	<div class="page">
+		<router-outlet
+			(activate)="activate()"
+			(deactivate)="deactivate()"
+		></router-outlet>
+	</div>
+</section>
+<!-- 內頁 結束 -->
+
+<!-- 通用頁尾 開始 -->
+<app-footer></app-footer>
+<!-- 通用頁尾 結束 -->

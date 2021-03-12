@@ -1,0 +1,54 @@
+@import "src/less/base/color.less";
+@import "src/less/base/LessXD.less";
+
+
+.stage {
+	position: relative;
+	height: 670px;
+	width: 1000px;
+	margin: 0 auto;
+
+	@media @view-xl {
+		width: auto;
+		overflow: hidden;
+		padding-top: 5%;
+		padding-bottom: 100%;
+		margin-bottom: -20%;
+		height: 0;
+
+		&-wrap {
+			width: 120%;
+			margin-left: -10%;
+		}
+	}
+
+	@image-set:
+	reimu 47 70 23 3.9,
+	marisa 56 70 23 47.9,
+	aki 43 70 23 27.8,
+	aya 98 93 0 .5;
+
+	&-wrap > div {
+		position: absolute;
+		background-size: 100% auto;
+	}
+
+	.for(@image-set, {
+
+		@pair: extract(@list, @i);
+		@name: extract(@pair, 1);
+		@width: extract(@pair, 2);
+		@padding-bottom: extract(@pair, 3);
+		@margin-top: extract(@pair, 4);
+		@left: extract(@pair, 5);
+
+		.stage-@{name} {
+			width: @width * 1%;
+			padding-bottom: @padding-bottom * 1%;
+			margin-top: @margin-top * 1%;
+			left: @left * 1%;
+			background-image: url("@{images}/2018/stage/@{name}.png");
+		}
+	});
+
+}

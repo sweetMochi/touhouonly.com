@@ -1,0 +1,126 @@
+@import "src/less/base/color.less";
+@import "src/less/base/LessXD.less";
+
+
+@media screen and (min-width: @ww-xl) {
+	.nav {
+
+		nav {
+			position: relative;
+			background-color: @glass-dark;
+			height: 70px;
+			line-height: 70px;
+			margin-bottom: 30px;
+		}
+
+		&-btn {
+			display: none;
+		}
+
+		&-list {
+			display: block;
+			margin: 0 auto;
+			width: 1200px;
+
+			> li {
+				position: relative;
+				float: left;
+				width: 16.66%;
+
+				&:hover {
+					.nav-sec {
+						max-height: 300px;
+						transition: max-height ease-out .3s;
+					}
+				}
+			}
+		}
+
+		&-sec {
+			max-height: 0;
+			overflow: hidden;
+			position: absolute;
+			bottom: 100%;
+			left: 0;
+			width: 100%;
+			cursor: default;
+			background-color: rgba(0, 0, 0, .5);
+			transition: max-height ease-out .3s;
+		}
+
+		span {
+			display: block;
+			height: 100%;
+			color: #fff;
+			cursor: pointer;
+			font-size: @fz-h5;
+			text-shadow: 0 0 5px #000;
+			text-align: center;
+
+			&:hover {
+				background-color: rgba(0, 0, 0, .5);
+				text-shadow: 0 0 5px #ccc;
+
+				&::before {
+					transition: opacity ease-out .3s;
+					opacity: .7;
+					background-position: 0 100%;
+				}
+			}
+
+			&::before {
+				display: inline-block;
+				vertical-align: middle;
+				content: "";
+				width: 40px;
+				height: 40px;
+				opacity: 1;
+				position: relative;
+				margin-right: 10px;
+				opacity: 1;
+				background-size: 100% auto;
+			}
+		}
+	}
+}
+
+.nav {
+
+	&-2021 span::before {
+		background-image: url("@{images}/2021/base/dot.png");
+	}
+
+	&-2020 span::before {
+		background-image: url("@{images}/2020/base/dot.png");
+	}
+
+	&-2018 span::before {
+		background-image: url("@{images}/2018/base/dot.png");
+	}
+
+
+	& &-hide {
+		display: none;
+	}
+
+	& &-coming:hover {
+
+		span {
+			display: none;
+		}
+
+		.nav-hide {
+			display: block;
+		}
+	}
+
+	.loop(6,{
+		li:nth-child(@{index}) {
+			a, span {
+				&::before {
+					transform: rotate(@index * 99deg);
+				}
+			}
+		}
+	});
+}

@@ -1,0 +1,53 @@
+@import "src/less/base/color.less";
+
+
+.year {
+	position: relative;
+	padding: @sp * 3;
+	background-color: @glass-dark;
+	margin: 0 ( @sp * 3 );
+	margin-bottom: @sp * 3;
+}
+
+
+ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 ( 0 - @sp );
+}
+
+	li {
+
+		@media @view-xl--desktop {
+			width: 33.33%;
+		}
+
+		&:hover {
+			span {
+				background-color: @glass-dark--hover;
+			}
+		}
+	}
+
+	a {
+		display: block;
+		position: relative;
+		margin: 0 @sp;
+		margin-bottom: @sp * 2;
+	}
+
+	img {
+		display: block;
+	}
+
+	span {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: @sp ( @sp * 2 );
+		color: @bg-light;
+		font-size: @fz-small;
+		background-color: @glass-dark;
+	}

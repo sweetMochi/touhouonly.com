@@ -1,0 +1,67 @@
+.title:not(.full-width) {
+	position: relative;
+	vertical-align: middle;
+	line-height: 100%;
+	font-size: 1.8rem;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color: @mc-dark;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 50px;
+		right: 30px;
+		height: 1px;
+		background-color: @mc-dark;
+	}
+
+	&::before {
+		.dot;
+		content: "";
+		vertical-align: middle;
+		margin-right: 10px;
+		background-image: url("@{images}/2021/base/dot.png");
+	}
+
+
+	@media @view-xl {
+		font-size: 1.2rem;
+		line-height: 150%;
+
+		&::after {
+			left: 0;
+			right: 0;
+			bottom: -10px;
+		}
+	}
+}
+
+
+.year-2020 {
+	.title {
+		color: @mc-dark-2020;
+		&::before {
+			margin-right: @sp;
+			background-image: url("@{images}/2020/base/dot.png");
+		}
+		&::after {
+			background-color: @mc-dark-2020;
+		}
+	}
+}
+
+
+.year-2018 {
+	.title {
+		color: @mc-dark-2018;
+		&::before {
+			margin-right: @sp;
+			background-image: url("@{images}/2018/base/dot.png");
+		}
+		&::after {
+			background-color: @mc-dark-2018;
+		}
+	}
+}
