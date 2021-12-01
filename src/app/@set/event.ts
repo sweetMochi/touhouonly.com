@@ -43,12 +43,12 @@ export interface EventSchedule {
 export const EVENT_DATA: EventData[] = [
 	{
 		nth: 5,
-		year: 2021,
-		date: '2021-06-19',
+		year: 2022,
+		date: '2022-02-26',
 		offer: 50,
 		thisYear: true,
-		signupLink: 'https://www.accupass.com/go/touhouonly5',
-		signupClosedDate: '2021-05-01'
+		signupLink: 'https://www.accupass.com/go/touhouonly5in2022',
+		signupClosedDate: '2022-01-26'
 	},
 	{
 		nth: 4,

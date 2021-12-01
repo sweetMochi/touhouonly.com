@@ -94,7 +94,7 @@ _Touhou Project on wiki: [Touhou Project](https://en.wikipedia.org/wiki/Touhou_P
 │   │   └─── 📁 stage
 │   │   　   [2018] With special logo
 │   │   　   [2020] With special logo
-│   │   　   [2021] Event of this year
+│   │   　   [2022] Event of this year
 │   │
 │   └─── 📁 assets
 │   │   [lang] Language file (Only zh-tw available)
