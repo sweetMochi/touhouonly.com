@@ -56,7 +56,7 @@ export class IndexComponent implements OnInit, OnDestroy {
 		).subscribe( () => {
 
 			// 取得當前路由年份
-			this.year = this.aRoute.routeConfig.data ? this.aRoute.routeConfig.data.year : null;
+			this.year = this.aRoute.routeConfig.data ? this.aRoute.routeConfig.data['year'] : null;
 
 			setTimeout( () => {
 				// 尋找錨點
@@ -70,7 +70,7 @@ export class IndexComponent implements OnInit, OnDestroy {
 		});
 
 		// 取得當前路由年份
-		this.year = this.aRoute.routeConfig.data ? this.aRoute.routeConfig.data.year : null;
+		this.year = this.aRoute.routeConfig.data ? this.aRoute.routeConfig.data['year'] : null;
 
 		// 增加年份
 		this.renderer.addClass(document.body, 'year-' + this.year);
@@ -80,7 +80,7 @@ export class IndexComponent implements OnInit, OnDestroy {
 
 	ngOnDestroy(): void {
 		// 解除所有訂閱，包括自己
-		this.ngUnsubscribe.next();
+		this.ngUnsubscribe.next(null);
 		this.ngUnsubscribe.complete();
 		// 移除年份
 		this.renderer.removeClass(document.body, 'year-' + this.year);

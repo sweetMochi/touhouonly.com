@@ -30,11 +30,11 @@ export class EventService {
 	year( route: ActivatedRoute ): YearList {
 
 		if ( route.routeConfig.data ) {
-			return  route.routeConfig.data.year;
+			return  route.routeConfig.data['year'];
 		}
 
 		if ( route.parent.routeConfig && route.parent.routeConfig.data ) {
-			return route.parent.routeConfig.data.year;
+			return route.parent.routeConfig.data['year'];
 		}
 
 		return null;

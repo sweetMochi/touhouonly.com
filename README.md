@@ -34,17 +34,17 @@ _Touhou Project on wiki: [Touhou Project](https://en.wikipedia.org/wiki/Touhou_P
 
 ### Built With
 
-![npm](https://img.shields.io/badge/npm-6.14.6-blue?logo=npm&style=for-the-badge)
-![typescript](https://img.shields.io/badge/typescript-4.0.2-blue?logo=typescript&style=for-the-badge)
-![@types/googlemaps](https://img.shields.io/badge/@types/googlemaps-0.0.41-green?logo=typescript&style=for-the-badge)
-![@types/google.analytics](https://img.shields.io/badge/@types/google.analytics-0.0.41-green?logo=typescript&style=for-the-badge)
-![fontawesome-free](https://img.shields.io/badge/fontawesome--free-5.15.1-blue?logo=font-awesome&style=for-the-badge)
+![npm](https://img.shields.io/badge/npm-8.5.5-blue?logo=npm&style=for-the-badge)
+![typescript](https://img.shields.io/badge/typescript-4.7.2-blue?logo=typescript&style=for-the-badge)
+![@types/googlemaps](https://img.shields.io/badge/@types/googlemaps-3.43.3-green?logo=typescript&style=for-the-badge)
+![@types/google.analytics](https://img.shields.io/badge/@types/google.analytics-0.0.42-green?logo=typescript&style=for-the-badge)
+![fontawesome-free](https://img.shields.io/badge/fontawesome--free-6.2.1-blue?logo=font-awesome&style=for-the-badge)
 
 ### Angular Plugins
 
-![angular](https://img.shields.io/badge/angular-11.0.5-red?logo=angular&style=for-the-badge)
-![ngx-translate](https://img.shields.io/badge/@ngx--translate-13.0.0-orange?logo=angular&style=for-the-badge)
-![@angular/google-maps](https://img.shields.io/badge/@angular/google--maps-11.0.0-orange?logo=angular&style=for-the-badge)
+![angular](https://img.shields.io/badge/angular-14.0.0-red?logo=angular&style=for-the-badge)
+![ngx-translate](https://img.shields.io/badge/@ngx--translate-14.0.0-orange?logo=angular&style=for-the-badge)
+![@angular/google-maps](https://img.shields.io/badge/@angular/google--maps-14.0.0-orange?logo=angular&style=for-the-badge)
 
 
 <!-- Tree View -->
@@ -94,7 +94,7 @@ _Touhou Project on wiki: [Touhou Project](https://en.wikipedia.org/wiki/Touhou_P
 │   │   └─── 📁 stage
 │   │   　   [2018] With special logo
 │   │   　   [2020] With special logo
-│   │   　   [2022] Event of this year
+│   │   　   [2023] Event of this year
 │   │
 │   └─── 📁 assets
 │   │   [lang] Language file (Only zh-tw available)

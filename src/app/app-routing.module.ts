@@ -18,7 +18,7 @@ const routes: Routes = [
 	{
 		path: '',
 		data: {
-			year: 2022
+			year: 2023
 		} as PageData,
 		component: IndexComponent,
 		children: [

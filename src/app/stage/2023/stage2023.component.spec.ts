@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Stage2022Component } from './stage2022.component';
+import { Stage2023Component } from './stage2023.component';
 
-describe('Stage2022Component', () => {
-  let component: Stage2022Component;
-  let fixture: ComponentFixture<Stage2022Component>;
+describe('Stage2023Component', () => {
+  let component: Stage2023Component;
+  let fixture: ComponentFixture<Stage2023Component>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Stage2022Component ]
+      declarations: [ Stage2023Component ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Stage2022Component);
+    fixture = TestBed.createComponent(Stage2023Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

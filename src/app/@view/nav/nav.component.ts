@@ -1,8 +1,7 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router, Routes } from '@angular/router';
-import { Subject } from 'rxjs';
 import { filter } from 'rxjs/operators';
-import { EventData, EVENT_DATA } from 'src/app/@set';
+import { EventData } from 'src/app/@set';
 
 // 系統資源
 import { SITE_HOME } from 'src/app/@set/set.const';
@@ -17,10 +16,8 @@ import { EventService } from 'src/app/@sup';
 		'./nav-mobile.component.less',
 	]
 })
-export class NavComponent implements OnInit, OnDestroy {
+export class NavComponent implements OnInit {
 
-	/** 退訂管理 */
-	private ngUnsubscribe = new Subject();
 
 	/** 指定年份 */
 	@Input() year: number;
@@ -78,12 +75,6 @@ export class NavComponent implements OnInit, OnDestroy {
 			// 更新首頁網址
 			this.homeUrl();
 		});
-	}
-
-	ngOnDestroy(): void {
-		// 解除所有訂閱，包括自己
-		this.ngUnsubscribe.next();
-		this.ngUnsubscribe.complete();
 	}
 
 }

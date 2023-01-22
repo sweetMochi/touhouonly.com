@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
 
@@ -15,7 +14,6 @@ import { LangType } from './@set/set.const';
 export class AppComponent {
 
 	constructor(
-		private router: Router,
 		private translate: TranslateService
 	) {
 
@@ -25,15 +23,6 @@ export class AppComponent {
 		// Set lang, but there is one lang _(:3
 		this.translate.setDefaultLang(lang);
 		this.translate.use(lang);
-
-		// Watch router event
-		this.router.events.subscribe(event => {
-			if ( event instanceof NavigationEnd ) {
-				// Send GA page view data
-				ga('set', 'page', event.urlAfterRedirects);
-				ga('send', 'pageview');
-			}
-		});
 
 	}
 

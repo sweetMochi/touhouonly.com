@@ -58,7 +58,7 @@ export class IndexYearComponent implements OnInit {
 	 * @param item 當前年份
 	 */
 	image( item: EventData ): string {
-		return this.src + '/' + item.year + '.jpg';
+		return this.src + '/' + item.banner;
 	}
 
 
