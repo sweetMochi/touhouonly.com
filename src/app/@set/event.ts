@@ -51,7 +51,7 @@ export const EVENT_DATA: EventData[] = [
 		thisYear: true,
 		banner: '2022.jpg',
 		signupLink: 'https://www.accupass.com/go/touhouonly5in2023',
-		signupClosedDate: '2023-04-07'
+		signupClosedDate: '2023-05-11'
 	},
 	{
 		nth: 4,
