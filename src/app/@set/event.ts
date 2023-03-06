@@ -46,7 +46,7 @@ export const EVENT_DATA: EventData[] = [
 	{
 		nth: 5,
 		year: 2023,
-		date: '2023-05-07',
+		date: '2023-06-11',
 		offer: 50,
 		thisYear: true,
 		banner: '2022.jpg',
