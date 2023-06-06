@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { SITE_IMAGE } from 'src/app/@set';
 
 // 系統資源
 import { EventData } from 'src/app/@set/event';
@@ -11,6 +12,10 @@ import { EventService } from 'src/app/@sup/event.service';
 	templateUrl: './club.component.html'
 })
 export class ClubComponent implements OnInit {
+
+
+	/** 會場地圖 */
+	venueMap = '';
 
 	/** 本屆活動資料 */
 	event: EventData;
@@ -32,9 +37,14 @@ export class ClubComponent implements OnInit {
 		// 取得活動資料
 		this.event = this.eventSup.find(this.year);
 		// 如果有活動資料
-		if ( this.event ) {
+		if (this.event) {
 			// 判斷社團報名是否截止
 			this.signupClosed = this.eventSup.expired(this.event.signupClosedDate);
+
+			if (this.event.venueMap) {
+				this.venueMap = `${SITE_IMAGE}/event/venue/${this.event.year}.jpg`;
+			}
+
 		}
 	}
 

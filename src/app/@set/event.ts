@@ -49,9 +49,10 @@ export const EVENT_DATA: EventData[] = [
 		date: '2023-06-11',
 		offer: 50,
 		thisYear: true,
-		banner: '2022.jpg',
+		banner: '2023.jpg',
 		signupLink: 'https://www.accupass.com/go/touhouonly5in2023',
-		signupClosedDate: '2023-05-11'
+		signupClosedDate: '2023-05-11',
+		venueMap: true
 	},
 	{
 		nth: 4,

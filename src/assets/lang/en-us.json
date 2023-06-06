@@ -1,94 +1,95 @@
 {
-  "$": {
-    "announcements": "Announcements",
-    "announcementsForCosplay": "Announcements for cosplay",
-    "announcementsForVisitor": "Announcements for visitor",
-    "artSource": "Art source",
-    "boothX": "{{x}} booth",
-    "byBus": "By bus",
-    "byCar": "By car",
-    "byTheTaipeiMetro": "By the taipei metro",
-    "committee": "Committee",
-    "date": "Date",
-    "dressingRoom&Floor": "Dressing room & Floor",
-    "gensokyoEvent": "Gensokyo Event",
-    "hallRegulations": "Hall regulations",
-    "host": "Host",
-    "location": "Location",
-    "offer": "Offer",
-    "regulations": "Regulations",
-    "schedule": "Schedule ",
-    "signupLink": "Sign link",
-    "ticketNotice": "Ticket Notice",
-    "time": "Time",
-    "transportation": "Transportation"
-  },
-  "event": {
-    "2017": {
-      "subtitle": "Summer Origins"
-    },
-    "2018": {
-      "subtitle": "Autumn Harvest"
-    },
-    "2020": {
-      "subtitle": "Winter Sprite"
-    }
-  },
-  "form": {
-    "signup": "Signup",
-    "signupClosed": "Signup closed"
-  },
-  "hint": {
-    "regulations": "場內請勿喧嘩、奔跑及大聲喊叫，也請勿在出入口及走道逗留、休憩、聚會。若有需要請至休息區，請勿於走道邊席地而坐以免造成其他參加者出入移動之困擾。",
-    "signupIsClosed": "Signup is closed"
-  },
-  "link": {
-    "facebook": "Sakura Spring Fanspage",
-    "plurk": "Sakura Spring on Plurk",
-    "twitter": "Sakura Spring on Twitter"
-  },
-  "nav": {
-    "about": "About",
-    "club": "Club",
-    "cosplay": "Cosplay",
-    "home": "Home",
-    "location": "Lcation",
-    "visitor": "Visitor"
-  },
-  "schedule": {
-    "2018": {
-      "0": "少女準備中之社團入場",
-      "1": "幻想的境界 COSER 入場",
-      "2": "人里東方眾的一般入場",
-      "3": "念寫製作的 COSER 大合照",
-      "4": "騷靈三姊妹的東方音樂",
-      "5": "香霖堂的官方猜拳大賽"
-    },
-    "2020": {
-      "0": "少女準備中之社團入場",
-      "1": "幻想的境界 COSER 入場",
-      "2": "人里東方眾的一般入場",
-      "3": "騷靈三姊妹的東方音樂",
-      "4": "念寫 COSER 大合照",
-      "5": "琪露諾最強⭐抽獎大賽"
-    },
-    "2023": {
-      "0": "少女準備中之社團入場",
-      "1": "幻想的境界 COSER 入場",
-      "2": "人里東方眾的一般入場",
-      "3": "騷靈三姊妹的東方音樂",
-      "4": "念寫製作的 COSER 大合照",
-      "5": "完美的琪露諾算術教室 (๑˃ᴗ˂)ﻭ",
-      "6": "針妙丸的萬寶抽獎"
-    }
-  },
-  "site": {
-    "about": "這是一群，對東方樂此不疲的人們，為各位東方眾舉辦的一場盛宴 :)",
-    "address": "CHIENTAN YOUTH ACTIVITY CENTER 2F 群英堂",
-    "addressNTNU": "National Taiwan Normal University Map ( Gongguan Campus ) Jhongjheng Hall",
-    "committee": "Sakura Spring Festival Preparation Committee",
-    "nthX": "Sakura Spring Festival {{x}}",
-    "short": "Sakura Spring",
-    "title": "Sakura Spring Festival"
-  }
+	"$": {
+		"announcements": "Announcements",
+		"announcementsForCosplay": "Announcements for cosplay",
+		"announcementsForVisitor": "Announcements for visitor",
+		"artSource": "Art source",
+		"boothX": "{{x}} booth",
+		"byBus": "By bus",
+		"byCar": "By car",
+		"byTheTaipeiMetro": "By the taipei metro",
+		"committee": "Committee",
+		"date": "Date",
+		"dressingRoom&Floor": "Dressing room & Floor",
+		"gensokyoEvent": "Gensokyo Event",
+		"hallRegulations": "Hall regulations",
+		"host": "Host",
+		"location": "Location",
+		"offer": "Offer",
+		"regulations": "Regulations",
+		"schedule": "Schedule ",
+		"signupLink": "Sign link",
+		"ticketNotice": "Ticket Notice",
+		"time": "Time",
+		"transportation": "Transportation",
+		"venueMap": "Venue map"
+	},
+	"event": {
+		"2017": {
+			"subtitle": "Summer Origins"
+		},
+		"2018": {
+			"subtitle": "Autumn Harvest"
+		},
+		"2020": {
+			"subtitle": "Winter Sprite"
+		}
+	},
+	"form": {
+		"signup": "Signup",
+		"signupClosed": "Signup closed"
+	},
+	"hint": {
+		"regulations": "場內請勿喧嘩、奔跑及大聲喊叫，也請勿在出入口及走道逗留、休憩、聚會。若有需要請至休息區，請勿於走道邊席地而坐以免造成其他參加者出入移動之困擾。",
+		"signupIsClosed": "Signup is closed"
+	},
+	"link": {
+		"facebook": "Sakura Spring Fanspage",
+		"plurk": "Sakura Spring on Plurk",
+		"twitter": "Sakura Spring on Twitter"
+	},
+	"nav": {
+		"about": "About",
+		"club": "Club",
+		"cosplay": "Cosplay",
+		"home": "Home",
+		"location": "Lcation",
+		"visitor": "Visitor"
+	},
+	"schedule": {
+		"2018": {
+			"0": "少女準備中之社團入場",
+			"1": "幻想的境界 COSER 入場",
+			"2": "人里東方眾的一般入場",
+			"3": "念寫製作的 COSER 大合照",
+			"4": "騷靈三姊妹的東方音樂",
+			"5": "香霖堂的官方猜拳大賽"
+		},
+		"2020": {
+			"0": "少女準備中之社團入場",
+			"1": "幻想的境界 COSER 入場",
+			"2": "人里東方眾的一般入場",
+			"3": "騷靈三姊妹的東方音樂",
+			"4": "念寫 COSER 大合照",
+			"5": "琪露諾最強⭐抽獎大賽"
+		},
+		"2023": {
+			"0": "少女準備中之社團入場",
+			"1": "幻想的境界 COSER 入場",
+			"2": "人里東方眾的一般入場",
+			"3": "騷靈三姊妹的東方音樂",
+			"4": "念寫製作的 COSER 大合照",
+			"5": "完美的琪露諾算術教室 (๑˃ᴗ˂)ﻭ",
+			"6": "針妙丸的萬寶抽獎"
+		}
+	},
+	"site": {
+		"about": "這是一群，對東方樂此不疲的人們，為各位東方眾舉辦的一場盛宴 :)",
+		"address": "CHIENTAN YOUTH ACTIVITY CENTER 2F 群英堂",
+		"addressNTNU": "National Taiwan Normal University Map ( Gongguan Campus ) Jhongjheng Hall",
+		"committee": "Sakura Spring Festival Preparation Committee",
+		"nthX": "Sakura Spring Festival {{x}}",
+		"short": "Sakura Spring",
+		"title": "Sakura Spring Festival"
+	}
 }

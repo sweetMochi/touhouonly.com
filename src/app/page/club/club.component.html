@@ -1,10 +1,20 @@
 <h1
 	class="headline"
-	translate="$.signupLink"
+	[translate]=" venueMap ? '$.venueMap' : '$.signupLink' "
 ></h1>
-<a
-	class="btn btn-block"
-	[href]="event.signupLink"
-	target="_blank"
-	[translate]=" signupClosed ? 'hint.signupIsClosed' : 'form.signup' "
-></a>
+
+<ng-container *ngIf="venueMap; else signup">
+	<img
+		[src]="venueMap"
+		[alt]=" '$.venueMap' | translate "
+	/>
+</ng-container>
+
+<ng-template #signup>
+	<a
+		class="btn btn-block"
+		[href]="event.signupLink"
+		target="_blank"
+		[translate]=" signupClosed ? 'hint.signupIsClosed' : 'form.signup' "
+	></a>
+</ng-template>
