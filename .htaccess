@@ -1,4 +1,8 @@
 RewriteEngine on
+
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://touhouonly.com//$1 [R,L]
+
 RewriteCond %{REQUEST_FILENAME} -s [OR]
 RewriteCond %{REQUEST_FILENAME} -l [OR]
 RewriteCond %{REQUEST_FILENAME} -d
