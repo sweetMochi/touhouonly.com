@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 // 系統資源
@@ -18,6 +18,9 @@ export class LogoComponent implements OnInit {
 	/** 活動年份 */
 	year: number;
 
+    /** 是否為主視覺 */
+    @Input() isStage = false;
+
 	constructor(
 		private eventSup: EventService,
 		private aRoute: ActivatedRoute
@@ -29,5 +32,14 @@ export class LogoComponent implements OnInit {
 		// 取得活動資料
 		this.event = this.eventSup.find(this.year);
 	}
+
+
+    /**
+     * 顯示 LOGO 年份樣式
+     */
+    logoYearStyle(): string {
+        return this.isStage ? `logo-${this.year}` : '';
+    }
+
 
 }

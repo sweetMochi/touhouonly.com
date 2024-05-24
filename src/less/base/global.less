@@ -8,7 +8,12 @@ body {
 	background-repeat: no-repeat;
 	background-size: 100% auto;
 	background-color: @bg-dark;
-	background-image: url("@{images}/2023/base/bg.jpg");
+	background-image: url("@{images}/2024/base/bg.jpg");
+
+	&.year-2023 {
+		background-color: @bg-dark-2023;
+        background-image: url("@{images}/2023/base/bg.jpg");
+	}
 
 	&.year-2020 {
 		background-color: @bg-dark-2020;

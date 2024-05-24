@@ -44,11 +44,20 @@ export interface EventSchedule {
 /** 歷年活動資料 */
 export const EVENT_DATA: EventData[] = [
 	{
+		nth: 6,
+		year: 2024,
+		date: '2024-07-06',
+		offer: 60,
+		thisYear: true,
+		banner: '2024.jpg',
+		signupLink: 'https://www.accupass.com/go/touhouonly6',
+		signupClosedDate: '2024-06-02'
+	},
+	{
 		nth: 5,
 		year: 2023,
 		date: '2023-06-11',
 		offer: 50,
-		thisYear: true,
 		banner: '2023.jpg',
 		signupLink: 'https://www.accupass.com/go/touhouonly5in2023',
 		signupClosedDate: '2023-05-11',

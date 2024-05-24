@@ -4,7 +4,6 @@
 	height: 390px;
 	margin: 0 auto;
 
-
 	@media @view-xl {
 		width: auto;
 		overflow: hidden;
@@ -14,11 +13,20 @@
 	}
 
 	.header-bg {
-		width: 60%;
-		margin-left: 20%;
-		padding-bottom: 41%;
+        width: 33%;
+        margin-left: 33%;
+        padding-bottom: 52%;
 		background-size: 100% auto;
-		background-image: url("@{images}/2023/stage/chara.png");
+		background-image: url("@{images}/2024/stage/chara.png");
+	}
+
+	&-2023 {
+		.header-bg {
+            width: 60%;
+            margin-left: 20%;
+            padding-bottom: 41%;
+            background-image: url("@{images}/2023/stage/chara.png");
+		}
 	}
 
 	&-2020 {
@@ -26,7 +34,6 @@
 			width: 125%;
 			margin-left: -15%;
 			padding-bottom: 40%;
-			background-size: 100% auto;
 			background-image: url("@{images}/2020/base/header.png");
 		}
 	}
@@ -37,7 +44,6 @@
 			width: 150%;
 			margin-left: -25%;
 			padding-bottom: 48%;
-			background-size: 100% auto;
 			background-image: url("@{images}/2018/base/header.png");
 
 			@media @view-xl {

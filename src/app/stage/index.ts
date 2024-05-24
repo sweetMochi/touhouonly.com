@@ -1,3 +1,4 @@
+export * from './2024/stage2024.component';
 export * from './2023/stage2023.component';
 export * from './2020/stage2020.component';
 export * from './2020/logo/stage2020-logo.component';

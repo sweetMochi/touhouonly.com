@@ -1,0 +1,51 @@
+@import "/src/less/base/color.less";
+@import "/src/less/base/LessXD.less";
+
+
+.stage {
+	position: relative;
+	height: 600px;
+
+	@media @view-xl {
+		width: auto;
+		overflow: hidden;
+		padding-bottom: 55%;
+		height: 0;
+
+		&-wrap {
+			width: 120%;
+			margin-left: -10%;
+		}
+	}
+
+	&-wrap > div {
+		position: absolute;
+		background-size: 100% auto;
+	}
+
+	&-chara {
+		width: 40%;
+		padding-bottom: 52%;
+        left: 29%;
+        /** 與背景高度計算方式相同 */
+        margin-top: 5.5%;
+		background-image: url("@{images}/2024/stage/chara.png");
+	}
+
+	&-sakura-left {
+        width: 30%;
+        padding-bottom: 46%;
+        top: 0;
+        left: 0;
+		background-image: url("@{images}/2024/stage/sakura-left.png");
+	}
+
+	&-sakura-right {
+        width: 16%;
+        padding-bottom: 49%;
+        top: 0;
+        right: 0;
+		background-image: url("@{images}/2024/stage/sakura-right.png");
+	}
+
+}

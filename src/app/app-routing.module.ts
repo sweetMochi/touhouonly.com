@@ -18,6 +18,35 @@ const routes: Routes = [
 	{
 		path: '',
 		data: {
+			year: 2024
+		} as PageData,
+		component: IndexComponent,
+		children: [
+			{
+				path: 'about',
+				component: AboutComponent
+			},
+			{
+				path: 'club',
+				component: ClubComponent
+			},
+			{
+				path: 'cosplay',
+				component: CosplayComponent
+			},
+			{
+				path: 'visitor',
+				component: VisitorComponent
+			},
+			{
+				path: 'location',
+				component: LocationComponent
+			}
+		]
+	},
+	{
+		path: '2023',
+		data: {
 			year: 2023
 		} as PageData,
 		component: IndexComponent,

@@ -2,6 +2,7 @@
 <!-- 首頁 開始 -->
 <section [hidden]="isPage">
 	<a id="anchor-index"></a>
+	<app-stage2024 *ngIf=" year === 2024 "></app-stage2024>
 	<app-stage2023 *ngIf=" year === 2023 "></app-stage2023>
 	<app-stage2020 *ngIf=" year === 2020 "></app-stage2020>
 	<app-stage2018 *ngIf=" year === 2018 "></app-stage2018>
