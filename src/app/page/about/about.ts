@@ -28,6 +28,14 @@ export interface AboutSchedule {
  */
 export const ABOUT_SCHEDULE: AboutSchedule[] = [
 	{
+		year: 2024,
+		list: [
+			'8：30',
+			'9：30',
+			'10：30'
+		]
+	},
+	{
 		year: 2023,
 		list: [
 			'8：30',
