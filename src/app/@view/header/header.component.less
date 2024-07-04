@@ -13,11 +13,67 @@
 	}
 
 	.header-bg {
-        width: 33%;
-        margin-left: 33%;
-        padding-bottom: 52%;
 		background-size: 100% auto;
-		background-image: url("@{images}/2024/stage/chara.png");
+		background-repeat: no-repeat;
+	}
+
+	&-2024 {
+
+		.header-zoom {
+			position: absolute;
+			width: 40%;
+			height: 100%;
+			margin-top: 3%;
+			left: 33%;
+
+			& div {
+				position: absolute;
+				background-size: 100% auto;
+				background-repeat: no-repeat;
+			}
+		}
+
+		@media @view-2l--desktop {
+			.header-zoom {
+				top: -3%;
+				margin-top: 0;
+			}
+		}
+
+
+		.header-megumu {
+			width: 52%;
+			padding-bottom: 62.3%;
+			left: 19%;
+			margin-top: 5%;
+			background-image: url("@{images}/2024/stage/megumu.png");
+		}
+
+		.header-aya {
+			width: 53.5%;
+			padding-bottom: 63.4%;
+			left: -14%;
+			margin-top: 21%;
+			background-image: url("@{images}/2024/stage/aya.png");
+		}
+
+		.header-hatate {
+			width: 53.9%;
+			padding-bottom: 66.6%;
+			left: 18%;
+			margin-top: 28%;
+			background-image: url("@{images}/2024/stage/hatate.png");
+		}
+
+		.header-momiji {
+			width: 44.9%;
+			padding-bottom: 58.5%;
+			left: 55%;
+			margin-top: 26%;
+			background-image: url("@{images}/2024/stage/momiji.png");
+		}
+
+
 	}
 
 	&-2023 {

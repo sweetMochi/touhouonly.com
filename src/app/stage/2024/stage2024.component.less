@@ -18,31 +18,70 @@
 		}
 	}
 
-	&-wrap > div {
+
+	&-wrap div {
 		position: absolute;
 		background-size: 100% auto;
+		background-repeat: no-repeat;
 	}
 
-	&-chara {
-		width: 40%;
-		padding-bottom: 52%;
-        left: 29%;
-        /** 與背景高度計算方式相同 */
-        margin-top: 5.5%;
-		background-image: url("@{images}/2024/stage/chara.png");
+	&-zoom {
+		width: 50%;
+		height: 100%;
+		left: 25%;
+	}
+
+	@media @view-xl {
+		&-zoom {
+			width: 70%;
+			height: 100%;
+			left: 18%;
+		}
+	}
+
+	&-megumu {
+		width: 52%;
+		padding-bottom: 62.3%;
+		left: 19%;
+		margin-top: 5%;
+		background-image: url("@{images}/2024/stage/megumu.png");
+	}
+
+	&-aya {
+		width: 53.5%;
+		padding-bottom: 63.4%;
+		left: -14%;
+		margin-top: 21%;
+		background-image: url("@{images}/2024/stage/aya.png");
+	}
+
+	&-hatate {
+		width: 53.9%;
+		padding-bottom: 66.6%;
+        left: 18%;
+		margin-top: 35%;
+		background-image: url("@{images}/2024/stage/hatate.png");
+	}
+
+	&-momiji {
+		width: 44.9%;
+		padding-bottom: 58.5%;
+		left: 55%;
+		margin-top: 26%;
+		background-image: url("@{images}/2024/stage/momiji.png");
 	}
 
 	&-sakura-left {
-        width: 30%;
-        padding-bottom: 46%;
+        width: 20%;
+        padding-bottom: 30%;
         top: 0;
         left: 0;
 		background-image: url("@{images}/2024/stage/sakura-left.png");
 	}
 
 	&-sakura-right {
-        width: 16%;
-        padding-bottom: 49%;
+        width: 10%;
+        padding-bottom: 30%;
         top: 0;
         right: 0;
 		background-image: url("@{images}/2024/stage/sakura-right.png");
