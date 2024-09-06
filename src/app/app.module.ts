@@ -1,11 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { GoogleMapsModule } from '@angular/google-maps';
-import {
-	HTTP_INTERCEPTORS,
-	HttpClient,
-	HttpClientModule,
-} from '@angular/common/http';
+import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
@@ -85,8 +81,6 @@ import { DateWeekPipe } from './@sup/date-week.pipe';
 		BrowserModule,
 		GoogleMapsModule,
 		AppRoutingModule,
-		// ngx-translate and the loader module
-		HttpClientModule,
 		TranslateModule.forRoot({
 			loader: {
 				provide: TranslateLoader,
@@ -95,7 +89,7 @@ import { DateWeekPipe } from './@sup/date-week.pipe';
 			}
 		})
 	],
-	providers: [],
+	providers: [provideHttpClient()],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -43,19 +43,6 @@
 // 		}
 // 	}
 // });
-// Imges set exsample.
-
-//stackoverflow.com/questions/21440789/loop-through-array-of-variable-names-in-less
-.makeRandom(@min: 0, @max: @min+1, @int: 0) {
-	.checkInt() {
-		@getNum: `Math.random() * (@{max} - @{min} + @{int})`;
-		@base: unit(`@{int} == 1 ? Math.floor(@{getNum}) : @{getNum}`);
-	}
-	.checkInt();
-	@rand: @base + @min;
-}
-
-.makeRandom(0, 99, 1);
 
 // @image-clue:
 // 01 23 26 35 1,
