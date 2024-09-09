@@ -1,5 +1,5 @@
 <h1 class="headline" translate="$.announcements"></h1>
-<img src="{{ image }}/about.png" alt="{{ 'site.title' | translate }}">
+<img src="{{image}}/about.png" [alt]=" 'site.title' | translate ">
 <p class="text-center" translate="site.about"></p>
 <ng-container *ngIf="schedule">
 <h2 class="title">
@@ -10,12 +10,14 @@
 		<th translate="$.gensokyoEvent"></th>
 		<th translate="$.time"></th>
 	</tr>
-		<ng-container *ngFor="let item of schedule.list; let i = index">
-			<tr>
-				<td translate="schedule.{{ year }}.{{ i }}"></td>
-				<td [textContent]="item"></td>
-			</tr>
-        </ng-container>
+		@if (schedule && schedule.list) {
+			@for (item of schedule.list; track $index; let i = $index) {
+				<tr>
+					<td translate="schedule.{{ year }}.{{ i }}"></td>
+					<td [textContent]="item"></td>
+				</tr>
+			}
+		}
     </table>
 </ng-container>
 <h2 class="title">

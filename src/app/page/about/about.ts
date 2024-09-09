@@ -1,4 +1,5 @@
-import { YearList } from 'src/app/@set/set.const';
+import { YearList } from 'src/app/@set';
+
 
 
 /**
@@ -28,7 +29,7 @@ export interface AboutSchedule {
  */
 export const ABOUT_SCHEDULE: AboutSchedule[] = [
 	{
-		year: 2024,
+		year: '2024',
 		list: [
 			'8：30',
 			'9：30',
@@ -41,7 +42,7 @@ export const ABOUT_SCHEDULE: AboutSchedule[] = [
 		]
 	},
 	{
-		year: 2023,
+		year: '2023',
 		list: [
 			'8：30',
 			'9：30',
@@ -53,7 +54,7 @@ export const ABOUT_SCHEDULE: AboutSchedule[] = [
 		]
 	},
 	{
-		year: 2020,
+		year: '2020',
 		list: [
 			'8：30',
 			'9：30',
@@ -64,7 +65,7 @@ export const ABOUT_SCHEDULE: AboutSchedule[] = [
 		]
 	},
 	{
-		year: 2018,
+		year: '2018',
 		list: [
 			'9：00',
 			'9：30',

@@ -1,6 +1,8 @@
-<b class="{{ item.id }}">
-	<a target="_blank" [href]="item.url">
-		<i class="fab fa-{{ item.icon }}"></i>
-		<span translate="link.{{ item.id }}"></span>
-	</a>
-</b>
+@if (item) {
+	<b [class]="item.id">
+		<a target="_blank" [href]="item.url">
+			<i class="fab fa-{{item.icon}}"></i>
+			<span translate="link.{{item.id}}"></span>
+		</a>
+	</b>
+}

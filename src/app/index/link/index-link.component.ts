@@ -1,6 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IndexLink } from './index-link';
 
+
+
+/**
+ * 首頁連結元件
+ */
 @Component({
 	selector: 'app-index-link',
 	templateUrl: './index-link.component.html',
@@ -9,9 +14,7 @@ import { IndexLink } from './index-link';
 export class IndexLinkComponent implements OnInit {
 
 	/** 項目名稱 */
-	@Input() item: IndexLink;
-
-	constructor() { }
+	@Input() item: IndexLink = null;
 
 	ngOnInit(): void {
 	}

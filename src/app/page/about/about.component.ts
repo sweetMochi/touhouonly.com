@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { SITE_IMAGE, YearList } from 'src/app/@set/set.const';
+import { SITE_IMAGE, YearList } from 'src/app/@set';
 import { EventService } from 'src/app/@sup/event.service';
-import { AboutSchedule, ABOUT_LINK, ABOUT_SCHEDULE } from './about';
+import { ABOUT_LINK, ABOUT_SCHEDULE, AboutSchedule } from './about';
+
+
 
 @Component({
 	selector: 'app-about',

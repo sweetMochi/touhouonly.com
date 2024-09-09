@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PageData } from './@set/page';
 import { IndexComponent } from './index/index.component';
 
 
@@ -12,13 +11,14 @@ import {
 	LocationComponent,
 	VisitorComponent
 } from './page';
+import { PageData } from './@set';
 
 
 const routes: Routes = [
 	{
 		path: '',
 		data: {
-			year: 2024
+			year: '2024'
 		} as PageData,
 		component: IndexComponent,
 		children: [
@@ -47,7 +47,7 @@ const routes: Routes = [
 	{
 		path: '2023',
 		data: {
-			year: 2023
+			year: '2023'
 		} as PageData,
 		component: IndexComponent,
 		children: [
@@ -76,7 +76,7 @@ const routes: Routes = [
 	{
 		path: '2020',
 		data: {
-			year: 2020
+			year: '2020'
 		} as PageData,
 		component: IndexComponent,
 		children: [
@@ -105,7 +105,7 @@ const routes: Routes = [
 	{
 		path: '2018',
 		data: {
-			year: 2018
+			year: '2018'
 		} as PageData,
 		component: IndexComponent,
 		children: [

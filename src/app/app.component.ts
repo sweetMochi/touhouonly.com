@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-
-
-// System
-import { LangType } from './@set/set.const';
+import { LangType } from './@set';
 
 
 @Component({

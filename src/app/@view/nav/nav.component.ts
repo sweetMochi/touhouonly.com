@@ -1,13 +1,14 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { NavigationEnd, Router, Routes } from '@angular/router';
+import { Component } from '@angular/core';
+import { NavigationEnd, Routes } from '@angular/router';
 import { filter } from 'rxjs/operators';
-import { EventData } from 'src/app/@set';
-
-// 系統資源
-import { SITE_HOME } from 'src/app/@set/set.const';
-import { EventService } from 'src/app/@sup';
+import { SITE_HOME } from 'src/app/@set';
+import { BaseComponent } from 'src/app/@sup/base.component';
 
 
+
+/**
+ * 選單元件
+ */
 @Component({
 	selector: 'app-nav',
 	templateUrl: './nav.component.html',
@@ -16,28 +17,17 @@ import { EventService } from 'src/app/@sup';
 		'./nav-mobile.component.less',
 	]
 })
-export class NavComponent implements OnInit {
+export class NavComponent extends BaseComponent {
 
-
-	/** 指定年份 */
-	@Input() year: number;
-
-	/** 活動資料 */
-	event: EventData;
 
 	/** 手機板側欄開啟狀態 */
-	show: boolean;
+	show = false;
 
 	/** 首頁網址 */
 	home = SITE_HOME;
 
 	/** 選單 */
 	list: Routes = [];
-
-	constructor(
-		private router: Router,
-		private eventSup: EventService
-	) { }
 
 
 	/**
@@ -60,7 +50,7 @@ export class NavComponent implements OnInit {
 	}
 
 
-	ngOnInit(): void {
+	override init(): void {
 		// 更新首頁網址
 		this.homeUrl();
 		// 從路由建立選單列表
@@ -76,5 +66,6 @@ export class NavComponent implements OnInit {
 			this.homeUrl();
 		});
 	}
+
 
 }

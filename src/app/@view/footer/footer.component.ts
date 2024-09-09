@@ -1,29 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component } from '@angular/core';
+import { BaseComponent } from 'src/app/@sup/base.component';
 
 
-// 系統資源
-import { EventService } from 'src/app/@sup';
 
-
+/**
+ * 通用頁尾元件
+ */
 @Component({
 	selector: 'app-footer',
 	templateUrl: './footer.component.html',
 	styleUrls: ['./footer.component.less']
 })
-export class FooterComponent implements OnInit {
-
-	/** 活動年份 */
-	year: number;
-
-	constructor(
-		private eventSup: EventService,
-		private aRoute: ActivatedRoute
-	) { }
-
-	ngOnInit(): void {
-		// 取得年份
-		this.year = this.eventSup.year(this.aRoute);
-	}
+export class FooterComponent extends BaseComponent {
 
 }

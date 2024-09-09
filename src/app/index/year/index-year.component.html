@@ -1,32 +1,28 @@
 <div class="year">
 	<ul>
-		<ng-container *ngFor="let item of list; let i = index">
+		@for (item of list; track $index; let i = $index) {
 			<li>
-				<ng-container *ngIf="item.homeSite">
+				<!-- 如果是獨立網站 -->
+				@if (item.homeSite) {
 					<a [href]="item.homeSite">
-						<img
-							[src]="image(item)"
-							alt="{{ 'site.nthX' | translate: { x: list.length - i } }}"
-						/>
-						<span
-							translate="site.nthX"
-							[translateParams]=" { x: list.length - i } "
-						></span>
+						<router-outlet *ngTemplateOutlet="yearItem; context: { item, i }" ></router-outlet>
 					</a>
-				</ng-container>
-				<ng-container *ngIf="!item.homeSite">
-					<a [routerLink]=" item.thisYear ? '/' : '/' + item.year">
-						<img
-							[src]="image(item)"
-							alt="{{ 'site.nthX' | translate: { x: list.length - i } }}"
-						/>
-						<span
-							translate="site.nthX"
-							[translateParams]=" { x: list.length - i } "
-						></span>
+				}
+				<!-- 如果是新版網站 -->
+				@else {
+					<a [routerLink]="eventSup.eventLink(item)">
+						<router-outlet *ngTemplateOutlet="yearItem; context: { item, i }" ></router-outlet>
 					</a>
-				</ng-container>
+				}
 			</li>
-		</ng-container>
+		}
 	</ul>
 </div>
+
+
+<!-- 年份項目 開始 -->
+<ng-template #yearItem let-item="item" let-i="i">
+	<img [src]="image(item)" [alt]="i18nNth(i)">
+	<span [textContent]="i18nNth(i)"></span>
+</ng-template>
+<!-- 年份項目 結束 -->

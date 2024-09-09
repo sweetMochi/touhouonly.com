@@ -1,55 +1,58 @@
 <section class="content">
-	<article *ngIf="event">
-		<h2>
-			<i class="dot"></i>
-			<span translate="$.announcements"></span>
-		</h2>
-		<ul class="notice">
-			<li>
-				<b translate="$.date"></b>
-				<span [textContent]="event.date"></span>
-			</li>
-			<li>
-				<b translate="$.location"></b>
-				<span
-					*ngIf="event.addressNTNU"
-					translate="site.addressNTNU"
-				></span>
-				<span
-					*ngIf="!event.addressNTNU"
-					translate="site.address"
-				></span>
-			</li>
-			<li>
-				<b translate="$.offer"></b>
-				<span
-					translate="$.boothX"
-					[translateParams]=" { x: event.offer } "
-				></span>
-			</li>
-			<li>
-				<b translate="$.committee"></b>
-				<span translate="site.committee"></span>
-			</li>
-			<li>
-				<b translate="form.signupClosed"></b>
-				<span
-					*ngIf="signupClosed"
-					translate="hint.signupIsClosed"
-				></span>
-				<span
-					*ngIf="!signupClosed"
-					[textContent]="event.signupClosedDate"
-				></span>
-			</li>
-		</ul>
-		<a
-			*ngIf="!signupClosed"
-			class="content-more" [href]="event.signupLink">
-			<i class="fa fa-caret-down"></i>
-			<span translate="form.signup"></span>
-		</a>
-	</article>
+
+	@if (event) {
+		<!-- 場次資訊 開始 -->
+		<article>
+			<h2>
+				<i class="dot"></i>
+				<span translate="$.announcements"></span>
+			</h2>
+
+			<ul class="notice">
+				<li>
+					<b translate="$.date"></b>
+					<span [textContent]="event.date"></span>
+				</li>
+				<li>
+					<b translate="$.location"></b>
+					@if (event.addressNTNU) {
+						<span translate="site.addressNTNU"></span>
+					}
+					@else {
+						<span translate="site.address"></span>
+					}
+				</li>
+				<li>
+					<b translate="$.offer"></b>
+					<span translate="$.boothX" [translateParams]="{ x: event.offer }"></span>
+				</li>
+				<li>
+					<b translate="$.committee"></b>
+					<span translate="site.committee"></span>
+				</li>
+				<li>
+					<b translate="form.signupClosed"></b>
+					@if (signupClosed) {
+						<span translate="hint.signupIsClosed"></span>
+					}
+					@else {
+						<span [textContent]="event.signupClosedDate"></span>
+					}
+				</li>
+			</ul>
+
+			@if (!signupClosed) {
+				<a class="content-more" [href]="event.signupLink">
+					<i class="fa fa-caret-down"></i>
+					<span translate="form.signup"></span>
+				</a>
+			}
+
+		</article>
+		<!-- 場次資訊 結束 -->
+	}
+
+	<!-- 場次規範 開始 -->
 	<article>
 		<h2>
 			<i class="dot"></i>
@@ -61,11 +64,19 @@
 			<span>more</span>
 		</a>
 	</article>
+	<!-- 場次規範 結束 -->
+
+	<!-- 連結列表 開始 -->
 	<aside class="link">
 		<ul>
-			<li *ngFor="let item of links">
-				<app-index-link [item]="item"></app-index-link>
-			</li>
+			@for (item of links; track $index) {
+				<li>
+					<app-index-link [item]="item"></app-index-link>
+				</li>
+			}
 		</ul>
 	</aside>
+	<!-- 連結列表 結束 -->
+
+
 </section>

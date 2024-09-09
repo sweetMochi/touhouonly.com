@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { EventData } from '../@set/event';
-import { EVENT_DATA } from '../@set/event';
-import { YearList } from '../@set/set.const';
+import { EVENT_DATA } from '../@set/event.const';
+import { EventData, PageData, YearList } from '../@set';
 
+
+
+/**
+ * 場次資料
+ */
 @Injectable({
 	providedIn: 'root'
 })
@@ -27,14 +31,19 @@ export class EventService {
 	 * 取得年份
 	 * @param route 當前路由
 	 */
-	year( route: ActivatedRoute ): YearList {
+	year(route: ActivatedRoute): YearList {
 
-		if ( route.routeConfig.data ) {
-			return  route.routeConfig.data['year'];
+		// 取得路由設定
+		let data = route.routeConfig.data as PageData;
+
+		if (data) {
+			return data.year;
 		}
 
+		// 如果有上層路由設定
 		if ( route.parent.routeConfig && route.parent.routeConfig.data ) {
-			return route.parent.routeConfig.data['year'];
+			let parentData = route.parent.routeConfig.data as PageData;
+			return parentData.year;
 		}
 
 		return null;
@@ -45,10 +54,27 @@ export class EventService {
 	 * 依活動年份尋找資料
 	 * @param year 活動年份
 	 */
-	find( year: number ): EventData {
+	find(year: string): EventData {
 		return this.data.find( item => {
 			return item.year === year;
 		});
 	}
+
+
+	/**
+	 * 活動連結
+	 * @param event 活動資料
+	 */
+	eventLink(event: EventData): string {
+
+		if (!event) {
+			return '';
+		}
+
+		// 如果是今年活動，則為 "/"
+		// 之前的活動則為 "/" + year
+		return event.thisYear ? '/' : '/' + event.year;
+	}
+
 
 }

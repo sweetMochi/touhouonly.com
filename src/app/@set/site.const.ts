@@ -1,7 +1,7 @@
 
 
-/** 年份範圍 */
-export type YearList = 2024 | 2023 | 2020 | 2018 | 2016 | 2015;
+/** 年份列表 */
+export const YEAR_LIST = ['2024', '2023', '2020', '2018', '2016', '2015'] as const;
 
 
 /** 首頁網址 */
@@ -28,11 +28,3 @@ export const LANG_LIST = [
 	'ja-jp',
 	'en-us'
 ] as const;
-
-/**
- * 語系類型
- * zh-tw: 繁體
- * ja-jp: 日文
- * en-us: 英文
- */
-export type LangType = typeof LANG_LIST[number];

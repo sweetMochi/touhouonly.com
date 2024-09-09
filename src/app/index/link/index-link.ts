@@ -1,4 +1,4 @@
-import { SOCIAL_LINK } from 'src/app/@set/set.const';
+import { SOCIAL_LINK } from 'src/app/@set/';
 
 
 /**

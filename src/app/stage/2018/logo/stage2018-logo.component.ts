@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
-// 系統資源
-import { EventData } from 'src/app/@set/event';
+import { YEAR_LIST, YearList, EventData } from 'src/app/@set';
 import { EventService } from 'src/app/@sup/event.service';
 
+
+
+/**
+ * 2018 LOGO 元件
+ */
 @Component({
 	selector: 'app-stage2018-logo',
 	templateUrl: './stage2018-logo.component.html',
@@ -13,10 +16,10 @@ import { EventService } from 'src/app/@sup/event.service';
 export class Stage2018LogoComponent implements OnInit {
 
 	/** 本屆活動資料 */
-	event: EventData;
+	event: EventData = null;
 
 	/** 活動年份 */
-	year: number;
+	year: YearList = YEAR_LIST[0];
 
 	constructor(
 		private eventSup: EventService,

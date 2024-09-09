@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
-// 系統資源
-import { EventData } from 'src/app/@set/event';
+import { YearList, EventData } from 'src/app/@set';
 import { EventService } from 'src/app/@sup/event.service';
+
+
 
 @Component({
 	selector: 'app-stage2020-logo',
@@ -16,7 +16,7 @@ export class Stage2020LogoComponent implements OnInit {
 	event: EventData;
 
 	/** 活動年份 */
-	year: number;
+	year: YearList;
 
 	constructor(
 		private eventSup: EventService,

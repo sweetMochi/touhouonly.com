@@ -1,7 +1,9 @@
-<div class="logo" [ngClass]="logoYearStyle()" *ngIf="event">
-	<i class="logo-icon"></i>
-	<h1>
-		<span translate="site.title"></span>
-		<b [textContent]="event.nth"></b>
-	</h1>
-</div>
+@if (event) {
+	<div class="logo" [ngClass]="logoYearStyle()">
+		<i class="logo-icon"></i>
+		<h1>
+			<span translate="site.title"></span>
+			<b [textContent]="event.nth"></b>
+		</h1>
+	</div>
+}

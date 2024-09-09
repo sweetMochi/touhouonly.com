@@ -1,12 +1,12 @@
-<header class="header header-{{ year }}">
+<header class="header header-{{year}}">
 	<div class="header-bg"></div>
-	<ng-container *ngIf="year === 2024">
+	@if (year === '2024') {
 		<div class="header-zoom">
 			<div class="header-megumu"></div>
 			<div class="header-aya"></div>
 			<div class="header-momiji"></div>
 			<div class="header-hatate"></div>
 		</div>
-	</ng-container>
+	}
 	<app-logo [routerLink]="home"></app-logo>
 </header>

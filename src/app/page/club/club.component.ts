@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { SITE_IMAGE } from 'src/app/@set';
-
-// 系統資源
-import { EventData } from 'src/app/@set/event';
+import { EventData, SITE_IMAGE, YearList } from 'src/app/@set';
 import { EventService } from 'src/app/@sup/event.service';
+
 
 
 @Component({
@@ -21,7 +19,7 @@ export class ClubComponent implements OnInit {
 	event: EventData;
 
 	/** 活動年份 */
-	year: number;
+	year: YearList;
 
 	/** 報名是否截止 */
 	signupClosed: boolean;
