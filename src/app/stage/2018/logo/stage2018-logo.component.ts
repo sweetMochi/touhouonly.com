@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { YEAR_LIST, YearList, EventData } from 'src/app/@set';
-import { EventService } from 'src/app/@sup/event.service';
+import { EventData, YEAR_LIST, YearList } from '../../../@set';
+import { EventService } from '../../../@sup';
 
 
 
@@ -11,12 +11,13 @@ import { EventService } from 'src/app/@sup/event.service';
 @Component({
 	selector: 'app-stage2018-logo',
 	templateUrl: './stage2018-logo.component.html',
-	styleUrls: ['./stage2018-logo.component.less']
+	styleUrls: ['./stage2018-logo.component.less'],
+	standalone: false
 })
 export class Stage2018LogoComponent implements OnInit {
 
 	/** 本屆活動資料 */
-	event: EventData = null;
+	event: EventData | null = null;
 
 	/** 活動年份 */
 	year: YearList = YEAR_LIST[0];

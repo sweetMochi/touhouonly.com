@@ -13,7 +13,7 @@ export abstract class BaseComponent implements OnInit {
 
 
 	/** 本屆活動資料 */
-	event: EventData = null;
+	event: EventData | null = null;
 
 	/** 活動年份 */
 	year: YearList = YEAR_LIST[0];

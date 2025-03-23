@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { GoogleMapsModule } from '@angular/google-maps';
-import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
@@ -89,7 +89,11 @@ import { DateWeekPipe } from './@sup/date-week.pipe';
 			}
 		})
 	],
-	providers: [provideHttpClient()],
+	providers: [
+		provideHttpClient(
+			withInterceptorsFromDi()
+		)
+	],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }

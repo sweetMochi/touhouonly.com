@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { BaseComponent } from 'src/app/@sup/base.component';
 import { INDEX_LINK } from '../link/index-link';
+import { BaseComponent } from '../../@sup/base.component';
 
 
 
@@ -10,7 +10,8 @@ import { INDEX_LINK } from '../link/index-link';
 @Component({
 	selector: 'app-index-main',
 	templateUrl: './index-main.component.html',
-	styleUrls: ['./index-main.component.less']
+	styleUrls: ['./index-main.component.less'],
+	standalone: false
 })
 export class IndexMainComponent extends BaseComponent {
 

@@ -1,5 +1,4 @@
-import { YearList } from 'src/app/@set';
-
+import { YearList } from '../../@set';
 
 
 /**

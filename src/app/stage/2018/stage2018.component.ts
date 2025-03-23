@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { YEAR_LIST, YearList, EventData } from 'src/app/@set';
-import { EventService } from 'src/app/@sup/event.service';
+import { EventData, YEAR_LIST, YearList } from '../../@set';
+import { EventService } from '../../@sup';
 
 
 
@@ -11,7 +11,8 @@ import { EventService } from 'src/app/@sup/event.service';
 @Component({
 	selector: 'app-stage2018',
 	templateUrl: './stage2018.component.html',
-	styleUrls: ['./stage2018.component.less']
+	styleUrls: ['./stage2018.component.less'],
+	standalone: false
 })
 export class Stage2018Component implements OnInit {
 
@@ -19,7 +20,7 @@ export class Stage2018Component implements OnInit {
 	year: YearList = YEAR_LIST[0];
 
 	/** 本屆活動資料 */
-	event: EventData = null;
+	event: EventData | null = null;
 
 	constructor(
 		private eventSup: EventService,

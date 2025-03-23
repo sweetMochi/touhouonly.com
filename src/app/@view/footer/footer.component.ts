@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BaseComponent } from 'src/app/@sup/base.component';
+import { BaseComponent } from '../../@sup/base.component';
 
 
 
@@ -9,7 +9,8 @@ import { BaseComponent } from 'src/app/@sup/base.component';
 @Component({
 	selector: 'app-footer',
 	templateUrl: './footer.component.html',
-	styleUrls: ['./footer.component.less']
+	styleUrls: ['./footer.component.less'],
+	standalone: false
 })
 export class FooterComponent extends BaseComponent {
 

@@ -10,7 +10,8 @@ import { PageData, YEAR_LIST, YearList } from '../@set';
 @Component({
 	selector: 'app-index',
 	templateUrl: './index.component.html',
-	styleUrls: ['./index.component.less']
+	styleUrls: ['./index.component.less'],
+	standalone: false
 })
 export class IndexComponent implements OnInit, OnDestroy {
 
@@ -65,8 +66,8 @@ export class IndexComponent implements OnInit, OnDestroy {
 	 */
 	updateYear(): void {
 		// 取得當前路由年份
-		let data = this.aRoute.routeConfig.data as PageData;
-		this.year = data ? data.year : null;
+		let data = this.aRoute.routeConfig?.data as PageData;
+		this.year = data ? data.year : this.year;
 	}
 
 

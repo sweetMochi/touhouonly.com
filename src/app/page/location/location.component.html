@@ -20,10 +20,12 @@
 		<li>重慶北路交流道下往士林、北投方向→過百齡橋直行中正路→中山北路右轉→沿中山北路直行過通河街口抵中心</li>
 	</ul>
 	<p>轉載自劍潭青年動中心官方網站</p>
-	<google-map
-		width="100%"
-		[center]="place"
-	></google-map>
+	@if (place) {
+		<google-map
+			width="100%"
+			[center]="place"
+		></google-map>
+	}
 </ng-container>
 
 <ng-container *ngIf=" year === '2018' ">

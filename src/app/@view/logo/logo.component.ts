@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { BaseComponent } from 'src/app/@sup/base.component';
+import { BaseComponent } from '../../@sup/base.component';
 
 
 
@@ -9,7 +9,8 @@ import { BaseComponent } from 'src/app/@sup/base.component';
 @Component({
 	selector: 'app-logo',
 	templateUrl: './logo.component.html',
-	styleUrls: ['./logo.component.less']
+	styleUrls: ['./logo.component.less'],
+	standalone: false
 })
 export class LogoComponent extends BaseComponent {
 

@@ -3,18 +3,11 @@
 	"version": 1,
 	"newProjectRoot": "projects",
 	"projects": {
-		"touhouonly": {
+		"touhouonly.com": {
 			"projectType": "application",
 			"schematics": {
 				"@schematics/angular:component": {
-					"style": "less",
-					"standalone": false
-				},
-				"@schematics/angular:directive": {
-					"standalone": false
-				},
-				"@schematics/angular:pipe": {
-					"standalone": false
+					"style": "less"
 				}
 			},
 			"root": "",
@@ -24,7 +17,7 @@
 				"build": {
 					"builder": "@angular-devkit/build-angular:application",
 					"options": {
-						"outputPath": "dist/touhouonly",
+						"outputPath": "dist/touhouonly.com",
 						"index": "src/index.html",
 						"browser": "src/main.ts",
 						"polyfills": [
@@ -33,24 +26,15 @@
 						"tsConfig": "tsconfig.app.json",
 						"inlineStyleLanguage": "less",
 						"assets": [
-							"src/favicon.ico",
-							"src/assets",
 							{
 								"glob": "**/*",
-								"input": "node_modules/@fortawesome/fontawesome-free/webfonts",
-								"output": "assets/fonts"
+								"input": "public"
 							}
 						],
 						"styles": [
 							"src/styles.less"
 						],
-						"scripts": [],
-						"stylePreprocessorOptions": {
-							"includePaths": [
-								"./src/less",
-								"./node_modules"
-							]
-						}
+						"scripts": []
 					},
 					"configurations": {
 						"production": {
@@ -62,8 +46,8 @@
 								},
 								{
 									"type": "anyComponentStyle",
-									"maximumWarning": "2kB",
-									"maximumError": "4kB"
+									"maximumWarning": "4kB",
+									"maximumError": "8kB"
 								}
 							],
 							"outputHashing": "all"
@@ -80,10 +64,10 @@
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"configurations": {
 						"production": {
-							"buildTarget": "touhouonly:build:production"
+							"buildTarget": "touhouonly.com:build:production"
 						},
 						"development": {
-							"buildTarget": "touhouonly:build:development"
+							"buildTarget": "touhouonly.com:build:development"
 						}
 					},
 					"defaultConfiguration": "development"
@@ -114,8 +98,8 @@
 				}
 			}
 		}
-	},
-	"cli": {
-		"analytics": "17557f6a-169c-4b11-ab1a-cafbf49b9795"
-	}
+  },
+  "cli": {
+    "analytics": "e725ff10-35c2-4a88-ad8c-6fe39ba29749"
+  }
 }

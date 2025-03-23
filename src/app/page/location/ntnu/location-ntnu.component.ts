@@ -6,12 +6,13 @@ import { LOCATION_NTNU_PLACE } from './location-ntnu';
 @Component({
 	selector: 'app-location-ntnu',
 	templateUrl: './location-ntnu.component.html',
-	styleUrls: ['./location-ntnu.component.less']
+	styleUrls: ['./location-ntnu.component.less'],
+	standalone: false
 })
 export class LocationNtnuComponent implements OnInit {
 
 	/** 取得地圖 */
-	@ViewChild(GoogleMap) map: GoogleMap;
+	@ViewChild(GoogleMap) map: GoogleMap | null = null;
 
 	/** 會場地點 */
 	place = LOCATION_NTNU_PLACE;

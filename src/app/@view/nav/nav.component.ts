@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Routes } from '@angular/router';
 import { filter } from 'rxjs/operators';
-import { SITE_HOME } from 'src/app/@set';
-import { BaseComponent } from 'src/app/@sup/base.component';
+import { SITE_HOME } from '../../@set';
+import { BaseComponent } from '../../@sup/base.component';
 
 
 
@@ -15,7 +15,8 @@ import { BaseComponent } from 'src/app/@sup/base.component';
 	styleUrls: [
 		'./nav.component.less',
 		'./nav-mobile.component.less',
-	]
+	],
+	standalone: false
 })
 export class NavComponent extends BaseComponent {
 
@@ -46,7 +47,7 @@ export class NavComponent extends BaseComponent {
 		// 尋找活動資料
 		this.event = this.eventSup.find(this.year);
 		// 更新首頁網址
-		this.home = this.event.thisYear ? '/' : '/' + this.event.year;
+		this.home = this.event?.thisYear ? '/' : '/' + this.event?.year;
 	}
 
 

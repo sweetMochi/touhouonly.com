@@ -42,4 +42,4 @@ testem.log
 Thumbs.db
 
 # Image exclude
-src/assets/images/
+public/assets/images/

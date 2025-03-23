@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { SITE_HOME } from 'src/app/@set';
-import { BaseComponent } from 'src/app/@sup/base.component';
+import { BaseComponent } from '../../@sup/base.component';
+import { SITE_HOME } from '../../@set';
 
 
 
@@ -10,7 +10,8 @@ import { BaseComponent } from 'src/app/@sup/base.component';
 @Component({
 	selector: 'app-header',
 	templateUrl: './header.component.html',
-	styleUrls: ['./header.component.less']
+	styleUrls: ['./header.component.less'],
+	standalone: false
 })
 export class HeaderComponent extends BaseComponent {
 
@@ -19,7 +20,8 @@ export class HeaderComponent extends BaseComponent {
 
 	override init(): void {
 		// 首頁網址
-		this.home = this.eventSup.eventLink(this.event);
+		let home = this.eventSup.eventLink(this.event);
+		this.home = home ? home : this.home;
 	}
 
 

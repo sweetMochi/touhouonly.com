@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { EVENT_DATA } from '../@set/event.const';
-import { EventData, PageData, YearList } from '../@set';
+import { EventData, PageData, YEAR_LIST, YearList } from '../@set';
 
 
 
@@ -34,19 +34,19 @@ export class EventService {
 	year(route: ActivatedRoute): YearList {
 
 		// 取得路由設定
-		let data = route.routeConfig.data as PageData;
+		let data = route.routeConfig?.data as PageData;
 
 		if (data) {
 			return data.year;
 		}
 
 		// 如果有上層路由設定
-		if ( route.parent.routeConfig && route.parent.routeConfig.data ) {
+		if ( route.parent?.routeConfig && route.parent.routeConfig.data ) {
 			let parentData = route.parent.routeConfig.data as PageData;
 			return parentData.year;
 		}
 
-		return null;
+		return YEAR_LIST[0];
 	}
 
 
@@ -54,10 +54,15 @@ export class EventService {
 	 * 依活動年份尋找資料
 	 * @param year 活動年份
 	 */
-	find(year: string): EventData {
-		return this.data.find( item => {
-			return item.year === year;
-		});
+	find(year: string | null): EventData | null {
+
+		if (!year) {
+			return null;
+		}
+
+		let data = this.data.find( item => item.year === year);
+
+		return data ? data : null;
 	}
 
 
@@ -65,7 +70,7 @@ export class EventService {
 	 * 活動連結
 	 * @param event 活動資料
 	 */
-	eventLink(event: EventData): string {
+	eventLink(event: EventData | null): string {
 
 		if (!event) {
 			return '';

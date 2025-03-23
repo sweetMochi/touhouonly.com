@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { EVENT_DATA, EventData, YEAR_LIST, YearList } from 'src/app/@set';
-import { EventService } from 'src/app/@sup';
+import { EVENT_DATA, EventData, YEAR_LIST, YearList } from '../../@set';
 import { INDEX_YEAR_IMAGE } from './index-year';
+import { EventService } from '../../@sup';
 
 
 
@@ -13,7 +13,8 @@ import { INDEX_YEAR_IMAGE } from './index-year';
 @Component({
 	selector: 'app-index-year',
 	templateUrl: './index-year.component.html',
-	styleUrls: ['./index-year.component.less']
+	styleUrls: ['./index-year.component.less'],
+	standalone: false
 })
 export class IndexYearComponent implements OnInit {
 

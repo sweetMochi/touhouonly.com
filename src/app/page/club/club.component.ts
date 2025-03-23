@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { EventData, SITE_IMAGE, YearList } from 'src/app/@set';
-import { EventService } from 'src/app/@sup/event.service';
+import { EventData, SITE_IMAGE, YearList } from '../../@set';
+import { EventService } from '../../@sup';
 
 
 
 @Component({
 	selector: 'app-club',
-	templateUrl: './club.component.html'
+	templateUrl: './club.component.html',
+	standalone: false
 })
 export class ClubComponent implements OnInit {
 
@@ -16,13 +17,13 @@ export class ClubComponent implements OnInit {
 	venueMap = '';
 
 	/** 本屆活動資料 */
-	event: EventData;
+	event: EventData | null = null;
 
 	/** 活動年份 */
-	year: YearList;
+	year: YearList | null = null;
 
 	/** 報名是否截止 */
-	signupClosed: boolean;
+	signupClosed = false;
 
 	constructor(
 		private eventSup: EventService,

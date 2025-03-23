@@ -13,7 +13,7 @@
 <ng-template #signup>
 	<a
 		class="btn btn-block"
-		[href]="event.signupLink"
+		[href]="event?.signupLink"
 		target="_blank"
 		[translate]=" signupClosed ? 'hint.signupIsClosed' : 'form.signup' "
 	></a>

@@ -1,4 +1,5 @@
-import { SOCIAL_LINK } from 'src/app/@set/';
+import { SOCIAL_LINK } from '../../@set';
+
 
 
 /**
