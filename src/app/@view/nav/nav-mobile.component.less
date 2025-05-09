@@ -6,6 +6,7 @@
 
 		@nav-w: 8vmin;
 
+		// 展開側欄背景
 		&-bg {
 			display: none;
 			position: fixed;
@@ -14,9 +15,10 @@
 			right: 0;
 			left: 0;
 			bottom: 0;
-			background-color: rgba(0, 0, 0, .5);
+			background-color: var(--glass-dark);
 		}
 
+		// 側欄區塊
 		&-wrap {
 			display: none;
 			position: fixed;
@@ -28,6 +30,7 @@
 			background-color: rgba(255, 255, 255, .8);
 		}
 
+		// 列表
 		&-list {
 			margin: 0 10%;
 			margin-top: 50%;
@@ -35,11 +38,11 @@
 			a,
 			span {
 				display: block;
-				color: #666;
+				color: var(--text-darken);
 				padding: 7% 3%;
 				font-weight: bold;
 				font-size: 5vmin;
-				border-bottom: solid 1px #bbb;
+				border-bottom: solid 1px var(--gc-light);
 			}
 
 			span:hover + ul {
@@ -47,6 +50,7 @@
 			}
 		}
 
+		// 次選單 (尚未使用)
 		&-sec {
 			display: none;
 			&:hover {
@@ -58,12 +62,13 @@
 			}
 		}
 
-		&-btn {
+		// 手機版功能按鈕
+		&-mobile-btn {
 			position: fixed;
 			top: 0;
 			right: 0;
 			z-index: 12;
-			color: #999;
+			color: var(--text-dark);
 			height: 100%;
 			text-align: center;
 			width: @nav-w;
@@ -80,6 +85,7 @@
 				position: relative;
 			}
 
+			// 底色
 			&::before {
 				content: "";
 				position: absolute;
@@ -89,20 +95,21 @@
 				bottom: -1px;
 				transform: rotate(45deg);
 				box-sizing: border-box;
-				border: solid 1px #ccc;
-				background-color: rgba(255, 255, 255, .7);
+				border: solid 1px var(--gc-light);
+				background-color: var(--glass-lighten);
 			}
 		}
 
+		// 側欄為顯示狀態
 		&--show {
 
 			display: block;
 
-			.nav-btn {
+			.nav-mobile-btn {
 				display: block;
-				color: @bg-light;
+				color: var(--text-lighten);
 				&::before {
-					background-color: @mc-dark;
+					background-color: var(--mc-dark);
 				}
 			}
 
@@ -114,14 +121,15 @@
 				display: block;
 			}
 
-			.nav-close {
+			.nav-mobile-close {
 				display: block;
 			}
 		}
 
-		&-close {
+		// 關閉按鈕
+		&-mobile-close {
 			display: none;
-			color: @bg-light;
+			color: var(--text-lighten);
 		}
 	}
 }
@@ -129,13 +137,13 @@
 
 .nav-2020 {
 	&.nav--show .nav-btn::before {
-		background-color: @mc-dark-2020;
+		background-color: var(--mc-dark);
 	}
 }
 
 
 .nav-2018 {
 	&.nav--show .nav-btn::before {
-		background-color: @mc-dark-2018;
+		background-color: var(--mc-dark);
 	}
 }

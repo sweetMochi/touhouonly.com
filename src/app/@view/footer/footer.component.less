@@ -14,7 +14,7 @@
 		background-size: 100% auto;
 		margin-right: 10px;
 		background-image: url("@{images}/logo.png");
-		filter: drop-shadow(0 0 3px rgba(0,0,0, .7));
+		filter: var(--drop-shadow);
 
 		@media @view-xl {
 			display: none;
@@ -22,15 +22,15 @@
 	}
 
 	p {
-		color: #eee;
+		color: var(--text-light);
 		text-shadow: 0 0 3px rgba(0,0,0, .3);
-		font-size: @fz-h5;
+		font-size: var(--fz-h5);
 		vertical-align: middle;
 		display: inline-block;
-		font-family: @ff-english;
+		font-family: var(--ff-headline);
 
 		@media @view-xl {
-			font-size: @fz-small;
+			font-size: var(--fz-small);
 		}
 	}
 
@@ -39,7 +39,7 @@
 			background-image: url("@{images}/2018/logo/icon.png");
 		}
 		p {
-			color: @gc-dark;
+			color: #38444d;
 		}
 	}
 

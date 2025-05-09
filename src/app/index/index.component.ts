@@ -37,7 +37,8 @@ export class IndexComponent implements OnInit, OnDestroy {
 		this.updateYear();
 
 		// 增加年份樣式
-		this.renderer.addClass(document.body, 'year-' + this.year);
+		this.renderer.addClass(document.body, `year-${this.year}`);
+		this.renderer.addClass(document.documentElement, `year-${this.year}`);
 
 	}
 
@@ -97,7 +98,8 @@ export class IndexComponent implements OnInit, OnDestroy {
 
 	ngOnDestroy(): void {
 		// 移除年份
-		this.renderer.removeClass(document.body, 'year-' + this.year);
+		this.renderer.removeClass(document.body, `year-${this.year}`);
+		this.renderer.removeClass(document.documentElement, `year-${this.year}`);
 	}
 
 

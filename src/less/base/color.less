@@ -1,45 +1,85 @@
 @images: "/assets/images";
 
-// 背景
-@bg-light: #fff;
-@bg-dark: #2b341c;
 
-// 背景 - 暗色
-@bg-dark-2023: #202147;
-@bg-dark-2020: #2b2839;
-@bg-dark-2018: #fcd56b;
 
-// 灰色系
-@gc-light: #ccc;
-@gc-dark: #38444d;
 
-// 主色系
-@mc-dark: #CC0048;
-@mc-light: #FF77A7;
+// 基礎變數
+:root {
 
-// 主色系 - 暗色
-@mc-dark-2020: #7ecef4;
-@mc-dark-2018: #e71f19;
+    // 背景色
+    --bg-dark: #2b341c;
 
-// 半透明
-@glass-dark: rgba(0, 0, 0, .5);
-@glass-dark--hover: rgba(0, 0, 0, .7);
+    // 灰色系
+    --gc-light: #ccc;
 
-// 基準文字大小
-@font-size: 16px;
+    // 主色系
+    --mc-dark: #CC0048;
 
-// 文字大小
-@fz-h1: 3rem;
-@fz-h2: 2.3rem;
-@fz-h3: 2rem;
-@fz-h4: 1.7rem;
-@fz-h5: 1.2rem;
-@fz-p: 1rem;
-@fz-small: 0.8rem;
+    // 半透明
+    --glass-lighten: rgba(255, 255, 255, .7);
+    --glass-light: rgba(255, 255, 255, .5);
+    --glass-dark: rgba(0, 0, 0, .5);
+    --glass-darken: rgba(0, 0, 0, .7);
 
-// 標題文字
-@ff-headline: "cwTeXFangSong", serif;
-@ff-english: "Playball", cursive;
+    // 文字顏色
+    --text-lighten: #fff;
+    --text-light: #eee;
+    --text-dark: #999;
+    --text-darken: #666;
+
+    // 陰影
+    --drop-shadow: drop-shadow(0 0 3px rgba(0,0,0, .7));
+
+    // 基準文字大小
+    --font-size: 16px;
+
+    // 文字大小
+    --fz-h1: 3rem;
+    --fz-h2: 2.3rem;
+    --fz-h3: 2rem;
+    --fz-h4: 1.7rem;
+    --fz-h5: 1.2rem;
+    --fz-p: 1rem;
+    --fz-small: 0.8rem;
+
+    // 字體
+    --ff-headline: "cwTeXFangSong", serif;
+    --ff-english: "Playball", cursive;
+
+}
+
+// 第 5 屆
+:root.year-2023 {
+
+    // 背景色
+    --bg-dark: #202147;
+
+    // 主色系
+    --mc-dark: #ff337b;
+
+}
+
+// 第 4 屆
+:root.year-2020 {
+
+    // 背景色
+    --bg-dark: #2b2839;
+
+    // 主色系
+    --mc-dark: #7ecef4;
+
+}
+
+// 第 3 屆
+:root.year-2018 {
+
+    // 背景色
+    --bg-dark: #fcd56b;
+
+    // 主色系
+    --mc-dark: #e71f19;
+
+}
 
 // 間隔
 @sp: 10px;

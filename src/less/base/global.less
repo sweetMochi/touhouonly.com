@@ -1,27 +1,24 @@
 
 body {
-	font-size: @font-size;
+	font-size: var(--font-size);
 	overflow-x: hidden;
-	color: #666;
+	color: var(--text-darken);
 	font-family: "微軟正黑體";
 	background-position: center top;
 	background-repeat: no-repeat;
 	background-size: 100% auto;
-	background-color: @bg-dark;
+	background-color: var(--bg-dark);
 	background-image: url("@{images}/2024/base/bg.jpg");
 
 	&.year-2023 {
-		background-color: @bg-dark-2023;
         background-image: url("@{images}/2023/base/bg.jpg");
 	}
 
 	&.year-2020 {
-		background-color: @bg-dark-2020;
 		background-image: url("@{images}/2020/base/bg.jpg");
 	}
 
 	&.year-2018 {
-		background-color: @bg-dark-2018;
 		background-image: url("@{images}/2018/base/bg.jpg");
 	}
 

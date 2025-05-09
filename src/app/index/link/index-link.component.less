@@ -3,9 +3,9 @@
 
 :host {
 	width: 100%;
-	font-size: @fz-h3;
-	font-family: @ff-headline;
-	background-color: @glass-dark;
+	font-size: var(--fz-h3);
+	font-family: var(--ff-headline);
+	background-color: var(--glass-dark);
 
 	@media @view-xl {
 		padding: ( @sp * .7 ) 0;
@@ -14,7 +14,7 @@
 	}
 
 	&:hover {
-		background-color: @glass-dark--hover;
+		background-color: var(--glass-darken);
 	}
 
 }
@@ -60,7 +60,7 @@ a {
 	justify-content: center;
 	width: 100%;
 	height: 100%;
-	color: @bg-light;
+	color: var(--text-lighten);
 }
 
 

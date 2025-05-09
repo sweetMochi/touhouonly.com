@@ -1,14 +1,14 @@
 
 .btn {
-	color: @bg-light;
+	color: var(--text-lighten);
 	display: inline-block;
 	text-align: center;
 	padding: @sp ( @sp * 1.5 );
-	background-color: @mc-dark;
+	background-color: var(--mc-dark);
 
 	&&-inactive {
-		color: #666;
-		background-color: #ccc;
+		color: var(--text-darken);
+		background-color: var(--gc-light);
 		cursor: default;
 
 		&:hover {
@@ -30,13 +30,13 @@
 
 .year-2020 {
 	.btn {
-		background-color: @mc-dark-2020;
+		background-color: var(--mc-dark);
 	}
 }
 
 
 .year-2018 {
 	.btn {
-		background-color: @mc-dark-2018;
+		background-color: var(--mc-dark);
 	}
 }

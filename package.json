@@ -1,6 +1,6 @@
 {
-	"name": "touhouonly",
-	"version": "0.0.0",
+	"name": "touhouonly.com",
+	"version": "1.0.0",
 	"scripts": {
 		"ng": "ng",
 		"start": "ng serve --open",

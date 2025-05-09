@@ -35,18 +35,18 @@
 	article {
 		padding: @sp * 3;
 		box-sizing: border-box;
-		background-color: @glass-dark;
+		background-color: var(--glass-dark);
 	}
 
 	h2 {
-		color: @bg-light;
+		color: var(--text-lighten);
 		vertical-align: middle;
-		font-size: @fz-h2;
+		font-size: var(--fz-h2);
 		margin-bottom: 10px;
-		font-family: @ff-headline;
+		font-family: var(--ff-headline);
 
 		@media @view-xl {
-			font-size: @fz-h4;
+			font-size: var(--fz-h4);
 		}
 	}
 
@@ -61,7 +61,7 @@
 		display: block;
 		line-height: 170%;
 		font-size: 1.2rem;
-		color: #eee;
+		color: var(--text-light);
 
 		@media @view-xl {
 			font-size: .9rem;
@@ -74,9 +74,9 @@
 
 	.notice {
 		b {
-			font-size: @fz-small;
+			font-size: var(--fz-small);
 			margin-right: @sp;
-			color: @gc-light;
+			color: var(--gc-light);
 		}
 	}
 
@@ -118,8 +118,8 @@
 	}
 
 	&-more {
-		color: @gc-light;
-		font-size: @fz-small;
+		color: var(--gc-light);
+		font-size: var(--fz-small);
 		margin-left: auto;
 
 		.fa {

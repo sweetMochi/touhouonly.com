@@ -4,7 +4,7 @@
 .year {
 	position: relative;
 	padding: @sp * 3;
-	background-color: @glass-dark;
+	background-color: var(--glass-dark);
 	margin: 0 ( @sp * 3 );
 	margin-bottom: @sp * 3;
 }
@@ -25,7 +25,7 @@ ul {
 
 		&:hover {
 			span {
-				background-color: @glass-dark--hover;
+				background-color: var(--glass-darken);
 			}
 		}
 	}
@@ -47,7 +47,7 @@ ul {
 		right: 0;
 		bottom: 0;
 		padding: @sp ( @sp * 2 );
-		color: @bg-light;
-		font-size: @fz-small;
-		background-color: @glass-dark;
+		color: var(--text-lighten);
+		font-size: var(--fz-small);
+		background-color: var(--glass-dark);
 	}

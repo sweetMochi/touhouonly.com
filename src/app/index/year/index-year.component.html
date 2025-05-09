@@ -5,13 +5,13 @@
 				<!-- 如果是獨立網站 -->
 				@if (item.homeSite) {
 					<a [href]="item.homeSite">
-						<router-outlet *ngTemplateOutlet="yearItem; context: { item, i }" ></router-outlet>
+						<ng-container *ngTemplateOutlet="yearItem; context: { item, i }" ></ng-container>
 					</a>
 				}
 				<!-- 如果是新版網站 -->
 				@else {
 					<a [routerLink]="eventSup.eventLink(item)">
-						<router-outlet *ngTemplateOutlet="yearItem; context: { item, i }" ></router-outlet>
+						<ng-container *ngTemplateOutlet="yearItem; context: { item, i }" ></ng-container>
 					</a>
 				}
 			</li>

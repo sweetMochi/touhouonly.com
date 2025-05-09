@@ -7,16 +7,18 @@
 
 		nav {
 			position: relative;
-			background-color: @glass-dark;
+			background-color: var(--glass-dark);
 			height: 70px;
 			line-height: 70px;
 			margin-bottom: 30px;
 		}
 
-		&-btn {
+		// 手機版功能按鈕
+		&-mobile-btn {
 			display: none;
 		}
 
+		// 列表
 		&-list {
 			display: block;
 			margin: 0 auto;
@@ -36,6 +38,7 @@
 			}
 		}
 
+		// 次選單 (目前未使用)
 		&-sec {
 			max-height: 0;
 			overflow: hidden;
@@ -44,22 +47,23 @@
 			left: 0;
 			width: 100%;
 			cursor: default;
-			background-color: rgba(0, 0, 0, .5);
+			background-color: var(--glass-dark);
 			transition: max-height ease-out .3s;
 		}
 
+		// 按鈕
 		span {
 			display: block;
 			height: 100%;
-			color: #fff;
+			color: var(--text-lighten);
 			cursor: pointer;
-			font-size: @fz-h5;
+			font-size: var(--fz-h5);
 			text-shadow: 0 0 5px #000;
 			text-align: center;
 
 			&:hover {
-				background-color: rgba(0, 0, 0, .5);
-				text-shadow: 0 0 5px #ccc;
+				background-color: var(--glass-dark);
+				text-shadow: 0 0 5px var(--gc-light);
 
 				&::before {
 					transition: opacity ease-out .3s;
