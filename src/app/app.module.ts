@@ -17,6 +17,7 @@ import {
 
 // Stage
 import {
+    Stage2025Component,
     Stage2024Component,
 	Stage2023Component,
 	Stage2020Component,
@@ -56,6 +57,7 @@ import { DateWeekPipe } from './@sup/date-week.pipe';
 		IndexMainComponent,
 		IndexYearComponent,
 		// Stage
+		Stage2025Component,
 		Stage2024Component,
 		Stage2023Component,
 		Stage2020Component,

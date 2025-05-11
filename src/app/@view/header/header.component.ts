@@ -10,7 +10,10 @@ import { SITE_HOME } from '../../@set';
 @Component({
 	selector: 'app-header',
 	templateUrl: './header.component.html',
-	styleUrls: ['./header.component.less'],
+	styleUrls: [
+		'./header.component.less',
+		'./header-2025.component.less'
+	],
 	standalone: false
 })
 export class HeaderComponent extends BaseComponent {

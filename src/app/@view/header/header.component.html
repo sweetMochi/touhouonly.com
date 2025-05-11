@@ -1,12 +1,29 @@
 <header class="header header-{{year}}">
 	<div class="header-bg"></div>
-	@if (year === '2024') {
-		<div class="header-zoom">
-			<div class="header-megumu"></div>
-			<div class="header-aya"></div>
-			<div class="header-momiji"></div>
-			<div class="header-hatate"></div>
-		</div>
+
+	@switch (year) {
+
+		@case ('2025') {
+			<div class="header-border-left"></div>
+			<div class="header-border-right"></div>
+			<div class="header-zoom">
+				<div class="header-raiko"></div>
+				<div class="header-reimu-sanae"></div>
+				<div class="header-yukari"></div>
+				<div class="header-marisa"></div>
+				<div class="header-hisami-zanmu"></div>
+			</div>
+		}
+		@case ('2024') {
+			<div class="header-zoom">
+				<div class="header-megumu"></div>
+				<div class="header-aya"></div>
+				<div class="header-momiji"></div>
+				<div class="header-hatate"></div>
+			</div>
+		}
+
 	}
+
 	<app-logo [routerLink]="home"></app-logo>
 </header>

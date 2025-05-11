@@ -2,18 +2,27 @@
 <!-- 首頁 開始 -->
 <section [hidden]="isPage">
 	<a id="anchor-index"></a>
-	@if (year === '2024') {
-		<app-stage2024></app-stage2024>
+
+	<!-- 依年份顯示主視覺 開始 -->
+	@switch (year) {
+		@case ('2025') {
+			<app-stage2025></app-stage2025>
+		}
+		@case ('2024') {
+			<app-stage2024></app-stage2024>
+		}
+		@case ('2023') {
+			<app-stage2023></app-stage2023>
+		}
+		@case ('2020') {
+			<app-stage2023></app-stage2023>
+		}
+		@case ('2018') {
+			<app-stage2023></app-stage2023>
+		}
 	}
-	@else if (year === '2023') {
-		<app-stage2023></app-stage2023>
-	}
-	@else if (year === '2020') {
-		<app-stage2020></app-stage2020>
-	}
-	@else if (year === '2018') {
-		<app-stage2018></app-stage2018>
-	}
+	<!-- 依年份顯示主視覺 結束 -->
+
 	<app-nav></app-nav>
 	<app-index-main></app-index-main>
 	<app-index-year></app-index-year>

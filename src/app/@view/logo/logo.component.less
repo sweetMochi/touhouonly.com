@@ -65,6 +65,32 @@
 		}
 	}
 
+	&.logo-2025,
+	&.logo-header-2025 {
+
+		.logo-icon {
+			background-image: url("@{images}/2025/base/logo.png");
+		}
+		h1 {
+			color: var(--mc-dark);
+		}
+	}
+
+	&.logo-2025 {
+		width: 120px;
+	}
+
+    @media @view-xl--desktop {
+
+		&.logo-header-2025 {
+			height: auto;
+			top: auto;
+			left: auto;
+			margin-top: 5%;
+			margin-left: 19%;
+		}
+    }
+
 	@media @view-xl {
 		position: fixed;
 		z-index: 12;
@@ -86,5 +112,20 @@
 		h1 {
 			display: none;
 		}
+
+		&.logo-2025,
+		&.logo-header-2025 {
+			.logo-icon {
+				margin: 0;
+				width: 11.5vmin;
+				height: 11.5vmin;
+			}
+		}
+
+		&.logo-2025 {
+			margin-top: 7%;
+			margin-left: 7%;
+		}
+
 	}
 }

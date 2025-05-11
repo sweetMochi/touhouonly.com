@@ -16,6 +16,9 @@ export class ClubComponent implements OnInit {
 	/** 會場地圖 */
 	venueMap = '';
 
+	/** 社團列表 */
+	clubList = '';
+
 	/** 本屆活動資料 */
 	event: EventData | null = null;
 
@@ -37,12 +40,12 @@ export class ClubComponent implements OnInit {
 		this.event = this.eventSup.find(this.year);
 		// 如果有活動資料
 		if (this.event) {
+
 			// 判斷社團報名是否截止
 			this.signupClosed = this.eventSup.expired(this.event.signupClosedDate);
 
-			if (this.event.venueMap) {
-				this.venueMap = `${SITE_IMAGE}/event/venue/${this.event.year}.jpg`;
-			}
+			this.venueMap = this.event.venueMap ? `${SITE_IMAGE}/event/venue/${this.event.year}.jpg` : '';
+			this.clubList = this.event.clubList ? `${SITE_IMAGE}/event/club/${this.event.year}.jpg`: '';
 
 		}
 	}

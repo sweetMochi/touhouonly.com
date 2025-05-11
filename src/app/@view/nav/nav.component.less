@@ -58,7 +58,7 @@
 			color: var(--text-lighten);
 			cursor: pointer;
 			font-size: var(--fz-h5);
-			text-shadow: 0 0 5px #000;
+			text-shadow: var(--text-shadow);
 			text-align: center;
 
 			&:hover {
@@ -89,6 +89,10 @@
 }
 
 .nav {
+
+	&-2025 span::before {
+		background-image: url("@{images}/2025/base/dot.png");
+	}
 
 	&-2024 span::before {
 		background-image: url("@{images}/2018/base/dot.png");

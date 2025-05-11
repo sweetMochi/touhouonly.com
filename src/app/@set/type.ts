@@ -46,6 +46,8 @@ export interface EventData {
 	thisYear?: boolean;
 	/** 是否已經製作會場地圖 */
 	venueMap?: boolean;
+	/** 是否已經製作社團列表 */
+	clubList?: boolean;
 	/** 是否有獨立網站 */
 	homeSite?: string;
 	/** 是否有副標題 */

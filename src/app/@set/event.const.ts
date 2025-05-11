@@ -7,11 +7,22 @@ import { EventData } from './type';
  */
 export const EVENT_DATA: EventData[] = [
 	{
+		nth: 7,
+		year: '2025',
+		date: '2025-05-17',
+		offer: 96,
+		thisYear: true,
+		banner: '2025.jpg',
+		signupLink: 'https://www.accupass.com/go/touhouonly7',
+		signupClosedDate: '2024-04-17',
+		venueMap: true,
+		clubList: true
+	},
+	{
 		nth: 6,
 		year: '2024',
 		date: '2024-07-06',
 		offer: 60,
-		thisYear: true,
 		banner: '2024.jpg',
 		signupLink: 'https://www.accupass.com/go/touhouonly6',
 		signupClosedDate: '2024-06-02',

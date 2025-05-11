@@ -1,0 +1,92 @@
+@import "../../../less/base/color.less";
+@import "../../../less/base/LessXD.less";
+
+
+.stage {
+	position: relative;
+	padding-bottom: 47%;
+
+	@media @view-xl {
+		width: auto;
+		overflow: hidden;
+		padding-bottom: 100%;
+		height: 0;
+	}
+
+
+	&-wrap div {
+		position: absolute;
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+	}
+
+	&-zoom {
+		width: 100%;
+		height: 100%;
+		left: 11%;
+	}
+
+	@media @view-xl {
+		&-zoom {
+			width: 200%;
+			left: -29%;
+		}
+	}
+
+	&-raiko {
+		width: 15.74%;
+		padding-bottom: 19.9%;
+		left: 20%;
+		margin-top: 5%;
+		background-image: url("@{images}/2025/stage/raiko.png");
+	}
+
+	&-reimu-sanae {
+		width: 28.34%;
+		padding-bottom: 18.82%;
+		left: 26%;
+		margin-top: 16%;
+		background-image: url("@{images}/2025/stage/reimu-sanae.png");
+	}
+
+	&-marisa {
+		width: 14.20%;
+		padding-bottom: 12.28%;
+		left: 20%;
+		margin-top: 27%;
+		background-image: url("@{images}/2025/stage/marisa.png");
+	}
+
+	&-yukari {
+		width: 15.62%;
+		padding-bottom: 18.13%;
+		left: 38%;
+		margin-top: 5%;
+		background-image: url("@{images}/2025/stage/yukari.png");
+	}
+
+	&-hisami-zanmu {
+		width: 28.52%;
+		padding-bottom: 16.65%;
+		left: 31%;
+		margin-top: 32%;
+		background-image: url("@{images}/2025/stage/hisami-zanmu.png");
+	}
+
+	&-border-left {
+        width: 45%;
+        padding-bottom: 42%;
+        top: 0;
+        left: 0;
+		background-image: url("@{images}/2025/stage/border-left.png");
+	}
+
+	&-border-right {
+        width: 52%;
+        padding-bottom: 42%;
+        top: 0;
+        right: 0;
+		background-image: url("@{images}/2025/stage/border-right.png");
+	}
+
+}

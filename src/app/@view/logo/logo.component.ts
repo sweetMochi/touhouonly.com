@@ -23,7 +23,7 @@ export class LogoComponent extends BaseComponent {
      * 顯示 LOGO 年份樣式
      */
     logoYearStyle(): string {
-        return this.isStage ? `logo-${this.year}` : '';
+        return this.isStage ? `logo-${this.year}` : `logo-header-${this.year}`;
     }
 
 

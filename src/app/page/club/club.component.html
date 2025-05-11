@@ -3,18 +3,19 @@
 	[translate]=" venueMap ? '$.venueMap' : '$.signupLink' "
 ></h1>
 
-<ng-container *ngIf="venueMap; else signup">
-	<img
-		[src]="venueMap"
-		[alt]=" '$.venueMap' | translate "
-	/>
-</ng-container>
+@if (venueMap) {
+	<img [src]="venueMap" [alt]=" '$.venueMap' | translate "/>
 
-<ng-template #signup>
+	@if (clubList) {
+		<img [src]="clubList" [alt]=" '$.venueMap' | translate "/>
+	}
+
+}
+@else {
 	<a
 		class="btn btn-block"
 		[href]="event?.signupLink"
 		target="_blank"
 		[translate]=" signupClosed ? 'hint.signupIsClosed' : 'form.signup' "
 	></a>
-</ng-template>
+}
